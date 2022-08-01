@@ -1,0 +1,44 @@
+.sgnimg {
+    height: 16vh;
+    padding-left: 14vh;
+}
+
+.sign-container {
+    width: 43vw;
+    height: 76vh;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-center;
+    align-items: center;
+}
+
+.screen-container {
+    padding-top: 7vh;
+    width: 100vw;
+    height: 76vh;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-center;
+    align-items: center;
+}
+
+.divide-line {
+    border-left: 1px solid white;
+    height: 10vh;
+}
+
+.topic {
+    height: 10vh;
+    font-size: 4vh;
+    padding-left: 2vw;
+    padding-top: 6vh;
+    text-align: left;
+}
+
+.topic-ml {
+    height: 10vh;
+    font-size: 4vh;
+    padding-left: 2vw;
+    padding-top: 1vh;
+    text-align: left;
+}

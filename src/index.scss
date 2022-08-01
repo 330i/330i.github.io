@@ -1,3 +1,8 @@
+@use './scss/style.scss';
+@use './scss/quote.scss';
+@use './scss/common.scss';
+@use './scss/text.scss';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
