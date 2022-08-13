@@ -1,0 +1,33 @@
+.topbar {
+  height: 9vh;
+  width: 92vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(35, 35, 35, 0.22);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 4vw;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-img {
+  height: 5.3vh;
+}
+
+.bar-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=topbar.css.map */

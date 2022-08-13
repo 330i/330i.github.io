@@ -1,0 +1,51 @@
+.text-hll {
+  font-size: 1.6vw;
+  font-weight: 500;
+}
+
+.text-hls {
+  font-size: 1.5vw;
+  font-weight: 500;
+  padding-bottom: 0.2vh;
+}
+
+.text-nhls {
+  font-size: 1.5vw;
+  font-weight: 300;
+  padding-bottom: 0.2vh;
+}
+
+.text-container {
+  width: 52vw;
+  padding-top: 4vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-container-hna {
+  width: 52vw;
+  padding-top: 20vh;
+}
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+  .text-container {
+    width: 100vw;
+    padding: 4vw;
+  }
+  .text-hll {
+    font-size: 3.2vw;
+    font-weight: 500;
+  }
+  .text-hls {
+    font-size: 3vw;
+    font-weight: 500;
+    padding-bottom: 0.2vh;
+  }
+  .text-nhls {
+    font-size: 3vw;
+    font-weight: 300;
+    padding-bottom: 0.2vh;
+  }
+}
+/*# sourceMappingURL=text.css.map */

@@ -1,11 +1,10 @@
 .sgnimg {
-    height: 16vh;
+    width: 16vw;
     padding-left: 14vh;
 }
 
 .sign-container {
     width: 43vw;
-    height: 76vh;
     display: flex;
     flex-direction: row; 
     justify-content: flex-center;
@@ -15,21 +14,22 @@
 .screen-container {
     padding-top: 7vh;
     width: 100vw;
-    height: 76vh;
+    margin-top: 9vh;
     display: flex;
     flex-direction: row; 
     justify-content: flex-center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .divide-line {
     border-left: 1px solid white;
-    height: 10vh;
+    height: 6vw;
 }
 
 .topic {
     height: 10vh;
-    font-size: 4vh;
+    font-size: 2.15vw;
     padding-left: 2vw;
     padding-top: 6vh;
     text-align: left;
@@ -41,4 +41,24 @@
     padding-left: 2vw;
     padding-top: 1vh;
     text-align: left;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .sign-container {
+        height: 8vw;
+        width: 100vw;
+        padding-bottom: 2vw;
+    }
+    .sgnimg {
+        width: 0;
+    }
+    .sgnimg-div {
+        width: 2vw;
+    }
+    .divide-line {
+        height: 0;
+    }
+    .topic {
+        font-size: 8vw;
+    }
 }

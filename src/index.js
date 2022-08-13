@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import About from './js/about.js';
-import HNA from './js/hna.js';
-import TopBar from './js/topbar.js';
+import About from './js/pages/about.js';
+import HNA from './js/pages/hna.js';
+import TopBar from './js/components/topbar.js';
+import Home from './js/pages/home.js';
 import './index.scss';
 
 class App extends React.Component {
@@ -10,7 +11,7 @@ class App extends React.Component {
     return (
         <div>
           <TopBar />
-          <About />
+          <Home />
         </div>
     );
   }

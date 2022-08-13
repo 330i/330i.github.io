@@ -1,19 +1,22 @@
 .topbar {
-    position: absolute;
     height: 9vh;
-    width: 100vw;
+    width: 92vw;
+    display: flex;
     background: rgba(35, 35, 35, 0.22);
     backdrop-filter: blur(4px);
-    align-items: center;
     flex-direction: row;
-    margin: 0;
+    justify-content: space-between;
+    padding: 0 4vw;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .logo-img {
-    height: 5vh;
+    height: 5.3vh;
 }
 
-.center-btn {
-    padding-left: 16vw;
-    padding-right: 16vw;
+.bar-btn {
+    align-self: center;
 }
