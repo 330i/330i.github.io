@@ -5,7 +5,27 @@
     position: relative;
 }
 
-.quote-l {
+.quote-screen {
+    width: 100vw;
+    height: 100vh;
+    animation: 3s ease-in-out 0s 1 hideText;
+    opacity: 0;
+    background: #232323;
+}
+
+@keyframes hideText {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.quote-xl {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -13,6 +33,16 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 2vh
+}
+
+.quote-l {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3vh
 }
 
 .quote-m {
