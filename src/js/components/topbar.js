@@ -6,6 +6,10 @@ export default function TopBar() {
 
     const navigate = useNavigate();
 
+    const navigateResume = () => {
+        navigate('/resume');
+    };
+
     const navigateAbout = () => {
     navigate('/about');
     };
@@ -17,7 +21,7 @@ export default function TopBar() {
     return (
         <div className="topbar">
             <div className="bar-btn">
-                <btn>
+                <btn onClick={navigateResume}>
                     Resume
                 </btn>
             </div>

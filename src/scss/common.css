@@ -23,9 +23,9 @@
 }
 
 .screen-container {
-  padding-top: 7vh;
+  height: 100vh;
   width: 100vw;
-  margin-top: 9vh;
+  margin-top: -7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +65,7 @@
 
 .topic-ml {
   height: 10vh;
-  font-size: 4vh;
+  font-size: 2.15vw;
   padding-left: 2vw;
   padding-top: 1vh;
   text-align: left;
