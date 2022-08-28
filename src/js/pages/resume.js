@@ -13,6 +13,9 @@ class Resume extends React.Component {
           <section>
             <Awards />
           </section>
+          <section>
+            <Education />
+          </section>
         </div>
       </div>
     );
@@ -126,6 +129,28 @@ class Awards extends React.Component {
           <li className="text-nhls">• Step by Step: a virtual fitness tournament app.</li>
           <li className="text-nhls">• Worked on competition logic and database code.</li>
           <li className="text-nhls">• Technology used: Flutter, Dart, Firebase</li>
+        </ul>
+      </div>
+    );
+  }
+}
+
+class Education extends React.Component {
+  render() {
+    return (
+      <div className="screen-container">
+        <div>
+          <Signature topicName="Education" />
+        </div>
+        <ul className="text-container-hna">
+          <li className="text-hll">
+            Cinco Ranch High School, Katy, TX | August 2018 - May 2022
+          </li>
+          <li>&nbsp;</li>
+          <li className="text-hll">
+            Texas A&M University | August 2022 - 
+          </li>
+          <li className="text-hls">• Major: General Engineering</li>
         </ul>
       </div>
     );
