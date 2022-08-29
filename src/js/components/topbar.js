@@ -18,6 +18,10 @@ export default function TopBar() {
     navigate('/');
     };
 
+    const navigateExperience = () => {
+        navigate('/experience');
+    };
+
     const navigateContact = () => {
         navigate('/contact');
     };
@@ -40,8 +44,8 @@ export default function TopBar() {
                 </btn>
             </div>
             <div className="bar-btn">
-                <btn>
-                    Projects
+                <btn onClick={navigateExperience}>
+                    Dev Experience
                 </btn>
             </div>
             <div className="bar-btn">

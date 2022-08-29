@@ -13,7 +13,6 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
-  padding-right: 17px;
 }
 
 .scrollsnap .container section {
@@ -30,5 +29,20 @@
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #232323;
+  margin-top: 9vh;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #959595;
+  border-radius: 10px;
+  border: 3px solid #232323;
 }
 /*# sourceMappingURL=scrollsnap.css.map */

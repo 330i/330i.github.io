@@ -8,13 +8,13 @@ class Resume extends React.Component {
       <div className="scrollsnap">
         <div className="container">
           <section>
-            <HNA />
+            <Education />
           </section>
           <section>
             <Awards />
           </section>
           <section>
-            <Education />
+            <HNA />
           </section>
         </div>
       </div>
