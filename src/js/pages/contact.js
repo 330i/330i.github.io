@@ -13,22 +13,22 @@ class Contact extends React.Component {
                     <Signature topicName="Contact" />
                     <ul className="text-container">
                         <li className="contact-container">
-                            <div className="contact-row">
+                            <a className="contact-row" href="mailto:id.kim.dev@gmail.com">
                                 <img src={email_img} className="contact-img"/>
                                 <h1 className="text-hls">Email: id.kim.dev@gmail.com</h1>
-                            </div>
-                            <div className="contact-row">
+                            </a>
+                            <a className="contact-row" href="https://www.linkedin.com/in/ian-kim-4130501a5/">
                                 <img src={linkedin_img} className="contact-img"/>
                                 <h1 className="text-hls">Linkedin</h1>
-                            </div>
-                            <div className="contact-row">
+                            </a>
+                            <a className="contact-row" href="https://github.com/330i">
                                 <img src={github_img} className="contact-img"/>
                                 <h1 className="text-hls">Github</h1>
-                            </div>
-                            <div className="contact-row">
+                            </a>
+                            <a className="contact-row" href="https://devpost.com/330i">
                                 <img src={devpost_img} className="contact-img"/>
                                 <h1 className="text-hls">Devpost</h1>
-                            </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
