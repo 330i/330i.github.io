@@ -12,9 +12,7 @@ class Signature extends React.Component {
     render() {
         return (
             <div className="sign-container">
-                <div className="sgnimg-div">
-                    <img src={sign_w} className="sgnimg" />
-                </div>
+                <img src={sign_w} className="sgnimg" />
                 <div className="divide-line" />
                 <div>
                     <h1 className="topic">

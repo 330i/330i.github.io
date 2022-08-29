@@ -26,10 +26,8 @@ class HNA extends React.Component {
   render() {
     return (
       <div className="screen-container">
-        <div>
-          <SignatureMl topicNameL1="Honors and" topicNameL2="Activities" />
-        </div>
-        <ul className="text-container-hna">
+        <SignatureMl topicNameL1="Honors and" topicNameL2="Activities" />
+        <ul className="text-container-resume">
           <li className="text-hll">
             CRyptonite Robotics | September 2018 – May 2019
           </li>
@@ -99,10 +97,8 @@ class Awards extends React.Component {
   render() {
     return (
       <div className="screen-container">
-        <div>
-          <Signature topicName="Awards" />
-        </div>
-        <ul className="text-container-hna">
+        <Signature topicName="Awards" />
+        <ul className="text-container-resume">
           <li className="text-hll">
             The Square Small Business Hackathon | Jan 22, 2020 | Online / International
           </li>
@@ -139,10 +135,8 @@ class Education extends React.Component {
   render() {
     return (
       <div className="screen-container">
-        <div>
-          <Signature topicName="Education" />
-        </div>
-        <ul className="text-container-hna">
+        <Signature topicName="Education" />
+        <ul className="text-container">
           <li className="text-hll">
             Cinco Ranch High School, Katy, TX | August 2018 - May 2022
           </li>

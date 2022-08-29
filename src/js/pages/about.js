@@ -6,9 +6,7 @@ class About extends React.Component {
     return (
       <div>
         <div className="screen-container">
-          <div>
             <Signature topicName="About Me" />
-          </div>
           <ul className="text-container">
             <li className="text-hls">
               A high school student always looking forward to learning and working

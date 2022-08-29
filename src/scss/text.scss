@@ -23,30 +23,40 @@
     animation: 1s ease-in-out 0s 1 showText;
 }
 
-.text-container-hna {
+.text-container-resume {
     width: 52vw;
     padding-top: 20vh;
     animation: 1s ease-in-out 0s 1 showText;
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
+@media screen and (max-aspect-ratio: 10/9) {
     .text-container {
-        width: 100vw;
-        padding: 4vw;
+        width: 95vw;
+        padding-top: 0;
+        padding-left: 4vw;
+        padding-right: 4vw;
     }
+
+    .text-container-resume {
+        width: 95vw;
+        padding-top: 0;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
     .text-hll {
-        font-size: 3.2vw;
+        font-size: 1.7vh;
         font-weight: 500;
     }
     
     .text-hls {
-        font-size: 3vw;
+        font-size: 1.5vh;
         font-weight: 500;
         padding-bottom: 0.2vh;
     }
     
     .text-nhls {
-        font-size: 3vw;
+        font-size: 1.5vh;
         font-weight: 300;
         padding-bottom: 0.2vh;
     }

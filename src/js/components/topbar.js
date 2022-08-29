@@ -1,6 +1,6 @@
 import React from 'react';
 import ik_logo from '../assets/ik_logo.png'
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function TopBar() {
 
@@ -16,6 +16,10 @@ export default function TopBar() {
 
     const navigateHome = () => {
     navigate('/');
+    };
+
+    const navigateContact = () => {
+        navigate('/contact');
     };
 
     return (
@@ -41,7 +45,7 @@ export default function TopBar() {
                 </btn>
             </div>
             <div className="bar-btn">
-                <btn>
+                <btn onClick={navigateContact}>
                     Contact
                 </btn>
             </div>
