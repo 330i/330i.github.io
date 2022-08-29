@@ -73,23 +73,37 @@
           animation: 1s ease-in-out 0s 1 slideInFromLeft;
 }
 
-@media screen and (max-aspect-ratio: 1 / 1) {
+@media screen and (max-aspect-ratio: 10 / 9) {
   .sign-container {
-    height: 8vw;
-    width: 100vw;
-    padding-bottom: 2vw;
+    height: 10vw;
+    display: contents;
+    margin-bottom: 2vh;
   }
   .sgnimg {
     width: 0;
-  }
-  .sgnimg-div {
-    width: 2vw;
   }
   .divide-line {
     height: 0;
   }
   .topic {
-    font-size: 8vw;
+    font-size: 4vh;
+    margin-left: 2.2vw;
+    height: 4vh;
+    padding-top: 0;
+  }
+  .topic-ml {
+    font-size: 4vh;
+    margin-left: 2.2vw;
+    margin-top: -1vh;
+    height: 10vh;
+  }
+  .screen-container {
+    margin-top: 9vh;
+    height: 91vh;
+    display: block;
+  }
+  .sign-box {
+    height: 10vw;
   }
 }
 

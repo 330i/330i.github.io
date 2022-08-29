@@ -1,10 +1,3 @@
-.quote-container {
-  padding-top: 17vh;
-  height: 50vh;
-  text-align: center;
-  position: relative;
-}
-
 .quote-screen {
   width: 0;
   height: 0;
@@ -12,6 +5,66 @@
           animation: 3s ease-in-out 0s 1 hideText;
   opacity: 0;
   background: #232323;
+}
+
+.quote-screen .quote-container {
+  padding-top: 17vh;
+  height: 50vh;
+  text-align: center;
+  position: relative;
+}
+
+.quote-screen .quote-container .quote-xl {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2vh;
+}
+
+.quote-screen .quote-container .quote-l {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 3vh;
+}
+
+.quote-screen .quote-container .quote-m {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 4vh;
+}
+
+.quote-screen .quote-container .quote-s {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 5vh;
+}
+
+.quote-screen .author {
+  text-align: center;
+  font-size: 4vh;
 }
 
 @-webkit-keyframes hideText {
@@ -56,58 +109,5 @@
     width: 0;
     height: 0;
   }
-}
-
-.quote-xl {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 2vh;
-}
-
-.quote-l {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 3vh;
-}
-
-.quote-m {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 4vh;
-}
-
-.quote-s {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  font-size: 5vh;
-}
-
-.author {
-  text-align: center;
-  font-size: 4vh;
 }
 /*# sourceMappingURL=quote.css.map */

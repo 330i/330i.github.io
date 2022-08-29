@@ -29,6 +29,25 @@
     animation: 1s ease-in-out 0s 1 showText;
 }
 
+.contact-container {
+    margin: auto;
+    width: 20vw;
+
+    .contact-row {
+        margin-top: -1vh;
+        align-items: center;
+        animation: 1s ease-in-out 0s 1 showText;
+        flex-direction: row;
+        display: flex;
+    
+        .contact-img {
+            height: 1.6vw;
+            padding-right: 0.5vw;
+            margin-bottom: 0.2vw;
+        }
+    }
+}
+
 @media screen and (max-aspect-ratio: 10/9) {
     .text-container {
         width: 95vw;
@@ -59,6 +78,11 @@
         font-size: 1.5vh;
         font-weight: 300;
         padding-bottom: 0.2vh;
+    }
+
+    .contact-container {
+        margin: 0;
+        width: 95vw;
     }
 }
 

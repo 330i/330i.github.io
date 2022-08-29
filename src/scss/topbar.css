@@ -21,11 +21,11 @@
   left: 0;
 }
 
-.logo-img {
+.topbar .logo-img {
   height: 5.3vh;
 }
 
-.bar-btn {
+.topbar .bar-btn {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
