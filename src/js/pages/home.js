@@ -1,6 +1,6 @@
 import React from "react";
-import background from "../assets/background.mp4"
-import me_img from "../assets/me_img.png";
+import background from "../assets/home/background.mp4"
+import me_img from "../assets/home/me_img.png";
 
 class Home extends React.Component {
     render() {

@@ -1,0 +1,74 @@
+.accordion {
+  width: 100%;
+  overflow: hidden;
+}
+
+.accordion input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4vh 0;
+  color: #8E8E93;
+  font-size: 4vh;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordion-tab:hover {
+  color: #ffffff;
+}
+
+.accordion-content {
+  max-height: 0;
+  padding: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.accordion-content img {
+  height: 3vh;
+  margin-bottom: 0.2em;
+}
+
+.accordion-content li {
+  margin-bottom: -0.1em;
+}
+
+.accordion-content .text-nhls {
+  font-size: 1.15vw;
+}
+
+@media screen and (max-aspect-ratio: 10 / 9) {
+  .accordion-content .text-nhls {
+    font-size: 1.3vh;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #636366;
+}
+
+input:checked + .accordion-tab {
+  color: #ffffff;
+  padding: 2.5vh 0;
+}
+
+input:checked ~ .accordion-content {
+  max-height: 1000vh;
+  padding: 0 0 1em 0;
+  opacity: 1;
+}
+/*# sourceMappingURL=accordion.css.map */

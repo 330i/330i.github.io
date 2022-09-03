@@ -1,8 +1,8 @@
 import React from "react";
-import email_img from "../assets/email.png";
-import linkedin_img from "../assets/linkedin.png";
-import github_img from "../assets/github.png";
-import devpost_img from "../assets/devpost.png";
+import email_img from "../assets/contact/email.png";
+import linkedin_img from "../assets/contact/linkedin.png";
+import github_img from "../assets/contact/github.png";
+import devpost_img from "../assets/contact/devpost.png";
 import Signature from "../components/signature";
 
 class Contact extends React.Component {

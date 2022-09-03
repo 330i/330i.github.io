@@ -1,12 +1,14 @@
 import React from "react";
+import Accordion from "../components/accordion";
 import SignatureMl from "../components/signatureml";
 
 class Experience extends React.Component {
     render() {
         return(
-            <div>
-                <div className="screen-container">
-                    <SignatureMl topicNameL1="Developer" topicNameL2="Experience"/>
+            <div className="screen-container">
+                <SignatureMl topicNameL1="Developer" topicNameL2="Experience"/>
+                <div className="text-container">
+                    <Accordion />
                 </div>
             </div>
         );
