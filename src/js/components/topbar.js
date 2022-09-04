@@ -41,26 +41,26 @@ export default function TopBar() {
                         ×
                     </label>
                     <div className="menu-items">
-                        <div className="bar-btn">
+                        <label className="bar-btn" for="menu-toggle" >
                             <btn onClick={navigateResume}>
                                 Resume
                             </btn>
-                        </div>
-                        <div className="bar-btn">
+                        </label>
+                        <label className="bar-btn" for="menu-toggle" >
                             <btn onClick={navigateAbout}>
                                 About Me
                             </btn>
-                        </div>
-                        <div className="bar-btn">
+                        </label>
+                        <label className="bar-btn" for="menu-toggle" >
                             <btn onClick={navigateExperience}>
                                 Dev Experience
                             </btn>
-                        </div>
-                        <div className="bar-btn">
+                        </label>
+                        <label className="bar-btn" for="menu-toggle" >
                             <btn onClick={navigateContact}>
                                 Contact
                             </btn>
-                        </div>
+                        </label>
                     </div>
                 </div>
             </div>
