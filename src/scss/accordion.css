@@ -72,7 +72,7 @@
 @media screen and (max-aspect-ratio: 10 / 9) {
   .accordion-screen {
     margin-top: 0;
-    max-height: 1000vh;
+    max-height: 70vh;
   }
 }
 
