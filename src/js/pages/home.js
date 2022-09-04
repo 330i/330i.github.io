@@ -14,7 +14,7 @@ class Home extends React.Component {
                     <video className="bg-video" src={background} muted loop autoPlay></video>
                 </div>
                 <div className="me-div">
-                    <img src={me_img} className="me-img"></img>
+                    <img src={me_img} alt="Ian Kim" className="me-img"></img>
                 </div>
             </div>
         )

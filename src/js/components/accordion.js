@@ -20,7 +20,7 @@ class Accordion extends React.Component {
                     <input type="checkbox" id="chck1" />
                     <label class="accordion-tab" for="chck1">Work Experience</label>
                     <ul class="accordion-content">
-                        <img src={hines_img} />
+                        <img src={hines_img} alt="Hines Interests LP" />
                         <li class="text-hls">
                             Hines Interests LP | Software Development Intern
                         </li>
@@ -34,7 +34,7 @@ class Accordion extends React.Component {
                     <input type="checkbox" id="chck2" />
                     <label class="accordion-tab" for="chck2">Hackathon Experience</label>
                     <ul class="accordion-content">
-                        <img src={flutter_img} />
+                        <img src={flutter_img} alt="Flutter" />
                         <li class="text-hls">
                             Flutter
                         </li>
@@ -42,7 +42,7 @@ class Accordion extends React.Component {
                             Proficient Experience
                         </li>
                         <li>&nbsp;</li>
-                        <img src={firebase_img} />
+                        <img src={firebase_img} alt="Firebase" />
                         <li class="text-hls">
                             Firebase
                         </li>
@@ -56,7 +56,7 @@ class Accordion extends React.Component {
                     <input type="checkbox" id="chck3" />
                     <label class="accordion-tab" for="chck3">Project Experience</label>
                     <ul class="accordion-content">
-                        <img src={opencv_img} />
+                        <img src={opencv_img} alt="OpenCV" />
                         <li class="text-hls">
                             OpenCV
                         </li>
@@ -64,7 +64,7 @@ class Accordion extends React.Component {
                             Moderate Experience
                         </li>
                         <li>&nbsp;</li>
-                        <img src={pytorch_img} />
+                        <img src={pytorch_img} alt="PyTorch" />
                         <li class="text-hls">
                             PyTorch
                         </li>
@@ -72,7 +72,7 @@ class Accordion extends React.Component {
                             Limited Experience
                         </li>
                         <li>&nbsp;</li>
-                        <img src={react_img} />
+                        <img src={react_img} alt="React" />
                         <li class="text-hls">
                             React
                         </li>
@@ -87,7 +87,7 @@ class Accordion extends React.Component {
                     <input type="checkbox" id="chck4" />
                     <label class="accordion-tab" for="chck4">Other Experience</label>
                     <ul class="accordion-content">
-                        <img src={python_img} />
+                        <img src={python_img} alt="Python" />
                         <li class="text-hls">
                             Python
                         </li>
@@ -95,7 +95,7 @@ class Accordion extends React.Component {
                             Proficient Experience
                         </li>
                         <li>&nbsp;</li>
-                        <img src={javascript_img} />
+                        <img src={javascript_img} alt="JavaScript" />
                         <li class="text-hls">
                             Javascript
                         </li>
@@ -103,7 +103,7 @@ class Accordion extends React.Component {
                             Proficient Experience
                         </li>
                         <li>&nbsp;</li>
-                        <img src={java_img} />
+                        <img src={java_img} alt="Java" />
                         <li class="text-hls">
                             Java
                         </li>

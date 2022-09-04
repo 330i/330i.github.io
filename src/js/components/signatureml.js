@@ -13,7 +13,7 @@ class SignatureMl extends React.Component {
     render() {
         return (
             <div className="sign-container">
-                <img src={sign_w} className="sgnimg" />
+                <img src={sign_w} alt="Ian Kim Signature" className="sgnimg" />
                 <div className="divide-line" />
                 <h1 className="topic-ml">
                     {this.props.topicNameL1}<br></br>{this.props.topicNameL2}

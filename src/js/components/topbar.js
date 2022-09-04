@@ -1,7 +1,6 @@
 import React from 'react';
 import ik_logo from '../assets/ik_logo.png'
 import {useNavigate} from 'react-router-dom';
-import sign_w from '../assets/sign_w.png';
 
 export default function TopBar() {
 
@@ -35,7 +34,7 @@ export default function TopBar() {
                     ☰
                 </label>
                 <btn onClick={navigateHome} className="logo-btn" >
-                    <img src={ik_logo} className="logo-img"/>
+                    <img src={ik_logo} alt="Ian Kim Logo" className="logo-img"/>
                 </btn>
                 <div className="sidebar">
                     <label className="menu-btn" for="menu-toggle" >
@@ -78,7 +77,7 @@ export default function TopBar() {
                 </div>
                 <div className="bar-btn">
                     <btn onClick={navigateHome}>
-                        <img src={ik_logo} className="logo-img"/>
+                        <img src={ik_logo} alt="Ian Kim Logo" className="logo-img"/>
                     </btn>
                 </div>
                 <div className="bar-btn">

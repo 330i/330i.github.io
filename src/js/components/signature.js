@@ -12,7 +12,7 @@ class Signature extends React.Component {
     render() {
         return (
             <div className="sign-container">
-                <img src={sign_w} className="sgnimg" />
+                <img src={sign_w} alt="Ian Kim Signature" className="sgnimg" />
                 <div className="divide-line" />
                 <div>
                     <h1 className="topic">
