@@ -7,7 +7,7 @@ class Experience extends React.Component {
         return(
             <div className="screen-container">
                 <SignatureMl topicNameL1="Developer" topicNameL2="Experience"/>
-                <div className="text-container">
+                <div className="text-container-experience">
                     <Accordion />
                 </div>
             </div>

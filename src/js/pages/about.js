@@ -7,7 +7,7 @@ class About extends React.Component {
       <div>
         <div className="screen-container">
             <Signature topicName="About Me" />
-          <ul className="text-container">
+          <ul className="text-container-long">
             <li className="text-hls">
               A high school student always looking forward to learning and working
               in a team with various skills and ideas for the benefit of the

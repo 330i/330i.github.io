@@ -27,7 +27,7 @@ class HNA extends React.Component {
     return (
       <div className="screen-container">
         <SignatureMl topicNameL1="Honors and" topicNameL2="Activities" />
-        <ul className="text-container-resume">
+        <ul className="text-container-long">
           <li className="text-hll">
             CRyptonite Robotics | September 2018 – May 2019
           </li>
@@ -98,7 +98,7 @@ class Awards extends React.Component {
     return (
       <div className="screen-container">
         <Signature topicName="Awards" />
-        <ul className="text-container-resume">
+        <ul className="text-container-long">
           <li className="text-hll">
             The Square Small Business Hackathon | Jan 22, 2020 | Online / International
           </li>

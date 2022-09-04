@@ -18,7 +18,7 @@
             transform: translateY(-50%);
             left: 50%;
             transform: translateX(-50%);
-            font-size: 2vh
+            font-size: 2vh;
         }
         
         .quote-l {
@@ -28,7 +28,7 @@
             transform: translateY(-50%);
             left: 50%;
             transform: translateX(-50%);
-            font-size: 3vh
+            font-size: 3vh;
         }
         
         .quote-m {
@@ -55,6 +55,28 @@
     .author {
         text-align: center;
         font-size: 4vh;
+    }
+}
+
+@media screen and (max-aspect-ratio: 10/9) {
+    .quote-screen {
+        .quote-container {
+            .quote-xl {
+                font-size: 2vw;
+            }
+            .quote-l {
+                font-size: 3vw;
+            }
+            .quote-m {
+                font-size: 4vw;
+            }
+            .quote-s {
+                font-size: 5vw;
+            }
+        }
+        .author {
+            font-size: 4vw;
+        }
     }
 }
 

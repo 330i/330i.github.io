@@ -23,9 +23,17 @@
     animation: 1s ease-in-out 0s 1 showText;
 }
 
-.text-container-resume {
+.text-container-long {
     width: 52vw;
     padding-top: 20vh;
+    animation: 1s ease-in-out 0s 1 showText;
+}
+
+.text-container-experience {
+    width: 52vw;
+    align-items: center;
+    -webkit-overflow-scrolling: none;
+    overscroll-behavior: none;
     animation: 1s ease-in-out 0s 1 showText;
 }
 
@@ -57,7 +65,14 @@
         padding-right: 4vw;
     }
 
-    .text-container-resume {
+    .text-container-long {
+        width: 95vw;
+        padding-top: 0;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .text-container-experience {
         width: 95vw;
         padding-top: 0;
         padding-left: 4vw;

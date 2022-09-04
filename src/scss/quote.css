@@ -67,6 +67,24 @@
   font-size: 4vh;
 }
 
+@media screen and (max-aspect-ratio: 10 / 9) {
+  .quote-screen .quote-container .quote-xl {
+    font-size: 2vw;
+  }
+  .quote-screen .quote-container .quote-l {
+    font-size: 3vw;
+  }
+  .quote-screen .quote-container .quote-m {
+    font-size: 4vw;
+  }
+  .quote-screen .quote-container .quote-s {
+    font-size: 5vw;
+  }
+  .quote-screen .author {
+    font-size: 4vw;
+  }
+}
+
 @-webkit-keyframes hideText {
   0% {
     opacity: 1;

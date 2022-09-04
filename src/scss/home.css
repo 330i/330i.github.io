@@ -103,4 +103,27 @@ h1.ian-text {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+@media screen and (max-aspect-ratio: 10 / 9) {
+  h1.hello-text {
+    text-align: center;
+    font-size: 5vw;
+    margin-bottom: 7vw;
+    -webkit-transition: 0.49s ease-in-out;
+    transition: 0.49s ease-in-out;
+  }
+  h1.ian-text {
+    text-align: center;
+    font-size: 10vw;
+    font-weight: bold;
+    margin-top: -0.67em;
+    background: linear-gradient(98.63deg, #9FF7E4 -1.74%, #92B8E6 39.64%, #8783E8 102.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+}
 /*# sourceMappingURL=home.css.map */

@@ -1,15 +1,23 @@
-.accordion {
+.accordion-screen {
+  overflow-y: scroll;
+  margin-top: 15vh;
+  max-height: 85vh;
+}
+
+.accordion-screen .accordion {
   width: 100%;
   overflow: hidden;
 }
 
-.accordion input {
+.accordion-screen .accordion input {
   position: absolute;
   opacity: 0;
   z-index: -1;
+  top: 0;
+  left: 0;
 }
 
-.accordion-tab {
+.accordion-screen .accordion-tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,11 +32,11 @@
   transition: all 0.2s ease-in-out;
 }
 
-.accordion-tab:hover {
+.accordion-screen .accordion-tab:hover {
   color: #ffffff;
 }
 
-.accordion-content {
+.accordion-screen .accordion-content {
   max-height: 0;
   padding: 0;
   -webkit-transition: all 0.2s ease-in-out;
@@ -36,21 +44,21 @@
   opacity: 0;
 }
 
-.accordion-content img {
+.accordion-screen .accordion-content img {
   height: 3vh;
   margin-bottom: 0.2em;
 }
 
-.accordion-content li {
+.accordion-screen .accordion-content li {
   margin-bottom: -0.1em;
 }
 
-.accordion-content .text-nhls {
+.accordion-screen .accordion-content .text-nhls {
   font-size: 1.15vw;
 }
 
 @media screen and (max-aspect-ratio: 10 / 9) {
-  .accordion-content .text-nhls {
+  .accordion-screen .accordion-content .text-nhls {
     font-size: 1.3vh;
   }
 }
@@ -59,6 +67,13 @@
   width: 100%;
   height: 1px;
   background-color: #636366;
+}
+
+@media screen and (max-aspect-ratio: 10 / 9) {
+  .accordion-screen {
+    margin-top: 0;
+    max-height: 1000vh;
+  }
 }
 
 input:checked + .accordion-tab {
