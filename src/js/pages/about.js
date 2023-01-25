@@ -3,6 +3,7 @@ import Signature from "../components/signature";
 
 class About extends React.Component {
   render() {
+    document.body.style.overflow = "hidden"
     return (
       <div>
         <div className="screen-container">
