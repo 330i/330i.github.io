@@ -10,7 +10,7 @@ class About extends React.Component {
             <Signature topicName="About Me" />
           <ul className="text-container-long">
             <li className="text-hls">
-              A high school student always looking forward to learning and working
+              A college student always looking forward to learning and working
               in a team with various skills and ideas for the benefit of the
               organization and self-growth. Also looking forward to learning
               software engineering, data science, and computer science where he
@@ -18,12 +18,9 @@ class About extends React.Component {
             </li>
             <li className="text-hls">&nbsp;</li>
             <li className="text-hls">I am currently a...</li>
-            <li className="text-nhls">• student in Cinco Ranch High School</li>
+            <li className="text-nhls">• student at Texas A&M University</li>
             <li className="text-nhls">• full stack Flutter mobile developer</li>
             <li className="text-nhls">• participant in various hackathons</li>
-            <li className="text-nhls">
-              • President of IDEA extracurricular club
-            </li>
             <li className="text-hls">&nbsp;</li>
             <li className="text-hls">I am currently learning...</li>
             <li className="text-nhls">• machine learning</li>
@@ -31,6 +28,7 @@ class About extends React.Component {
             <li className="text-nhls">• computer vision</li>
             <li className="text-hls">&nbsp;</li>
             <li className="text-hls">I am currently working on...</li>
+            <li className="text-nhls">• a Ferrari F2004 made out of paper</li>
             <li className="text-nhls">• something</li>
           </ul>
         </div>
