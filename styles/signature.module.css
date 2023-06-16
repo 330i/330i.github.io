@@ -1,0 +1,100 @@
+.sgnimg {
+  width: 16vw;
+  padding-left: 14vh;
+  animation: 1s ease-in-out 0s 1 slideInFromRight;
+}
+
+.signcontainer {
+  width: 43vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-center;
+  align-items: center;
+}
+
+.divideline {
+  border-left: 1px solid white;
+  height: 6vw;
+  animation: 0.5s ease-in-out 0s 1 increaseScale;
+}
+
+.topic {
+  height: 10vh;
+  font-size: 2.15vw;
+  padding-left: 2vw;
+  padding-top: 6vh;
+  text-align: left;
+  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+.topicml {
+  height: 10vh;
+  font-size: 2.15vw;
+  padding-left: 2vw;
+  padding-top: 1vh;
+  text-align: left;
+  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+@media screen and (max-aspect-ratio: 10/9) {
+  .signcontainer {
+    height: 10vw;
+    display: contents;
+    margin-bottom: 2vh;
+  }
+  .sgnimg {
+    width: 0;
+  }
+  .divideline {
+    height: 0;
+  }
+  .topic {
+    font-size: 4vh;
+    margin-left: 2.2vw;
+    height: 4vh;
+    padding-top: 0;
+  }
+  .topicml {
+    font-size: 4vh;
+    margin-left: 2.2vw;
+    margin-top: -1vh;
+    height: 10vh;
+  }
+  .signbox {
+    height: 10vw;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes increaseScale {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}/*# sourceMappingURL=signature.module.css.map */
