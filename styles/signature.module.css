@@ -1,6 +1,4 @@
 .sgnimg {
-  width: 16vw;
-  padding-left: 14vh;
   animation: 1s ease-in-out 0s 1 slideInFromRight;
 }
 
@@ -12,17 +10,9 @@
   align-items: center;
 }
 
-.divideline {
-  border-left: 1px solid white;
-  height: 6vw;
-  animation: 0.5s ease-in-out 0s 1 increaseScale;
-}
-
 .topic {
-  height: 10vh;
   font-size: 2.15vw;
   padding-left: 2vw;
-  padding-top: 6vh;
   text-align: left;
   animation: 1s ease-in-out 0s 1 slideInFromLeft;
 }

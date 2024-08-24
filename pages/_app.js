@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }) {
     <div>
       <Component {...pageProps} />
       <TopBar />
+      <span className="absolute right-4 bottom-2 text-sm font-light text-white/50">Content Revision: Jan. 2023</span>
     </div>
   );
 }

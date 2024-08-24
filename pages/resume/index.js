@@ -1,13 +1,14 @@
 "use client"
 
-import SignatureMl from "/components/signatureml";
+import { useState } from "react";
+
 import Signature from "/components/signature"
 import everythingStyle from "../../styles/everything.module.css"
 
 function HNA() {
   return (
     <div className={everythingStyle.screencontainer}>
-      <SignatureMl topicNameL1="Honors and" topicNameL2="Activities" />
+      <Signature>Honors and<br />Activities</Signature>
       <ul className={everythingStyle.textcontainerlong}>
         <li className={everythingStyle.texthll}>
           CRyptonite Robotics | September 2018 – May 2019
@@ -76,7 +77,7 @@ function HNA() {
 function Awards() {
   return (
     <div className={everythingStyle.screencontainer}>
-      <Signature topicName="Awards" />
+      <Signature>Awards</Signature>
       <ul className={everythingStyle.textcontainerlong}>
         <li className={everythingStyle.texthll}>
           The Square Small Business Hackathon | Jan 22, 2020 | Online / International
@@ -112,7 +113,7 @@ function Awards() {
 function Education() {
   return (
     <div className={everythingStyle.screencontainer}>
-      <Signature topicName="Education" />
+      <Signature>Education</Signature>
       <ul className={everythingStyle.textcontainer}>
         <li className={everythingStyle.texthll}>
           Cinco Ranch High School, Katy, TX | August 2018 - May 2022
@@ -131,15 +132,15 @@ function Education() {
 
 export default function Resume() {
   return(
-    <div className={everythingStyle.scrollsnap}>
-      <div className={everythingStyle.container}>
-        <section>
+    <div className="flex flex-row justify-center items-center w-full h-screen overflow-x-hidden">
+      <div className="flex-1 h-full m-0 snap-mandatory snap-y overflow-y-scroll overflow-x-hidden">
+        <section className="flex items-center h-full relative snap-start">
           <Education />
         </section>
-        <section>
+        <section className="flex items-center h-full relative snap-start">
           <Awards />
         </section>
-        <section>
+        <section className="flex items-center h-full relative snap-start">
           <HNA />
         </section>
       </div>
