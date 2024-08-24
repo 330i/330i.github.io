@@ -12,7 +12,7 @@ export default function Contact() {
   return(
     <div>
       <div className={everythingStyles.screencontainer}>
-        <Signature topicName="Contact" />
+        <Signature>Contact</Signature>
         <ul className={everythingStyles.textcontainer}>
           <li className={everythingStyles.contactcontainer}>
             <a className={everythingStyles.contactrow} href="mailto:id.kim.dev@proton.me">

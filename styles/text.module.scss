@@ -1,16 +1,16 @@
 .texthll {
-    font-size: 1.5vw;
+    font-size: 2.2vh;
     font-weight: 500;
 }
 
 .texthls {
-    font-size: 1.3vw;
+    font-size: 1.8vh;
     font-weight: 500;
     padding-bottom: 0.2vh;
 }
 
 .textnhls {
-    font-size: 1.3vw;
+    font-size: 1.8vh;
     font-weight: 300;
     padding-bottom: 0.2vh;
     color: #fff;
@@ -42,7 +42,6 @@
     width: 20vw;
 
     .contactrow {
-        margin-top: -1vh;
         align-items: center;
         animation: 1s ease-in-out 0s 1 showText;
         flex-direction: row;

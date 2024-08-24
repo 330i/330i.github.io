@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div>
       <div className={screenStyles.screencontainer}>
-          <Signature topicName="About Me" />
+        <Signature>About Me</Signature>
         <ul className={textStyles.textcontainerlong}>
           <li className={textStyles.texthls}>
             A college student always looking forward to learning and working
