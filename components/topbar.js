@@ -42,29 +42,29 @@ export default function TopBar() {
                     </div>
                 </div>
             </div>
-            <div className="absolute top-0 left-0 flex flex-row justify-between items-center w-screen px-24 py-6 -mt-32 opacity-0 xl:mt-0 xl:opacity-100 bg-zinc-800/20 backdrop-blur-sm transition-all duration-500">
+            <div className="absolute top-0 left-0 flex flex-row justify-between items-center w-screen px-24 py-4 -mt-32 opacity-0 xl:mt-0 xl:opacity-100 bg-zinc-800/20 backdrop-blur-sm transition-all duration-500">
                 <div className="flex flex-row justify-center w-40">
-                    <Link className="barbtn relative block text-xl font-semibold py-2 transition-all" href='/resume'>
+                    <Link className="barbtn relative block text-base font-semibold py-2 transition-all" href='/resume'>
                         Resume
                     </Link>
                 </div>
                 <div className="flex flex-row justify-center w-40">
-                    <Link className="barbtn relative block text-xl font-semibold py-2 transition-all" href='/about'>
+                    <Link className="barbtn relative block text-base font-semibold py-2 transition-all" href='/about'>
                         About
                     </Link>
                 </div>
                 <div className="flex flex-row justify-center w-40">
-                    <Link className="barbtn relative block text-xl font-semibold py-2 transition-all" href='/'>
-                        <img src='/ik_logo.png' alt="Ian Kim Logo" className="h-10" />
+                    <Link className="barbtn relative block text-base font-semibold py-2 transition-all" href='/'>
+                        <img src='/ik_logo.png' alt="Ian Kim Logo" className="h-8" />
                     </Link>
                 </div>
                 <div className="flex flex-row justify-center w-40">
-                    <Link className="barbtn relative block text-xl font-semibold py-2 transition-all" href='/experience'>
+                    <Link className="barbtn relative block text-base font-semibold py-2 transition-all" href='/experience'>
                         Dev Experience
                     </Link>
                 </div>
                 <div className="flex flex-row justify-center w-40">
-                    <Link className="barbtn relative block text-xl font-semibold py-2 transition-all" href='/contact'>
+                    <Link className="barbtn relative block text-base font-semibold py-2 transition-all" href='/contact'>
                         Contact
                     </Link>
                 </div>
