@@ -53,19 +53,19 @@ export default function About() {
             </div>
             {imgList}
             <ul className="w-full xl:w-1/2 xl:pr-20 keyframe-text-entry mt-8 mb-4 sm:mb-16 xl:mb-0">
-                <li className="text-base md:text-xl font-medium">
+                <li className="text-base md:text-base font-medium">
                     A college student always looking forward to add value to
                     a team with various skills and ideas for the benefit of the
                     organization and self-growth. Also looking forward to learning
                     software engineering, data science, and computer science where he
                     would be able to learn to utilize his skills.
                 </li>
-                <li className="text-md font-semibold">&nbsp;</li>
-                <li className="text-lg font-semibold">Ian is a...</li>
+                <li className="text-base font-semibold">&nbsp;</li>
+                <li className="text-base font-semibold">Ian is a...</li>
                 <li className="flex flex-col gap-2">
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("tamu.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
@@ -73,7 +73,7 @@ export default function About() {
                     </div>
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("office.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
@@ -81,19 +81,19 @@ export default function About() {
                     </div>
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("tamuhack.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
                             participant in various hackathons</div>
                     </div>
                 </li>
-                <li className="text-md font-semibold">&nbsp;</li>
-                <li className="text-lg font-semibold">Ian is currently learning...</li>
+                <li className="text-base font-semibold">&nbsp;</li>
+                <li className="text-base font-semibold">Ian is currently learning...</li>
                 <li className="flex flex-col gap-2">
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("austin.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
@@ -101,7 +101,7 @@ export default function About() {
                     </div>
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("molecules.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
@@ -109,7 +109,7 @@ export default function About() {
                     </div>
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("shark.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
@@ -117,19 +117,19 @@ export default function About() {
                     </div>
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("towerview.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
                             commercial real estate</div>
                     </div>
                 </li>
-                <li className="text-md font-semibold">&nbsp;</li>
-                <li className="text-lg font-semibold">Ian is currently working on...</li>
+                <li className="text-base font-semibold">&nbsp;</li>
+                <li className="text-base font-semibold">Ian is currently working on...</li>
                 <li className="flex flex-col gap-2">
                     <div>
                         <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
                             onMouseEnter={() => setSelectedImage("hiking.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
