@@ -1,118 +1,50 @@
 "use client";
 
-import everythingStyle from '../styles/everything.module.css'
+import clsx from "clsx";
 
-var hines_img = "/experience/hines_interests.png";
+import projectData from "../data/experience.json";
 
-var flutter_img = "/experience/flutter.png";
-var firebase_img = "/experience/firebase.png";
+export default function Accordion({ title, openGetter, openSetter, index, note, className }) {
 
-var opencv_img = "/experience/opencv.png";
-var pytorch_img = "/experience/pytorch.png";
-var react_img = "/experience/react.png";
-var python_img = "/experience/python.png";
-var javascript_img = "/experience/javascript.png";
-var java_img = "/experience/java.png";
+    const card = projectData[title].map((e) => 
+        <a href={Object.hasOwn(e, 'link') ? e.link : null} target="_blank" class="project-box grid overflow-hidden md:min-w-96 min-h-96 rounded-2xl shadow-lg transition-all">
+            <img class="project-img col-start-1 row-start-1 w-full h-full rounded-2xl object-cover blur-lg transition-all -z-10" title="Project Image" src={e.image} />
+            <div class="project-desc col-start-1 row-start-1 flex flex-col p-8 w-full h-full rounded-2xl overflow-y-hidden bg-zinc-800/50">
+                <span class="text-xl md:text-2xl leading-none mb-1">{e.title} <span class="text-xs md:text-sm text-nowrap">{e.date}</span></span>
+                <span class="text-sm md:text-base font-medium">{e.location}</span>
+                <span class="text-sm md:text-base font-medium mt-4">{e.tagline}</span>
+                <ul className="text-sm md:text-base list-disc ml-6">
+                    {e.desc.map((item) => <li>{item}</li>)}
+                </ul>
+                <span class="text-sm md:text-base font-medium mt-4">Technology Used</span>
+                <div class="pill_box">
+                    {e.tech.frontend.map((item) => <span class="pill frontend">{item}</span>)}
+                    {e.tech.backend.map((item) => <span class="pill backend">{item}</span>)}
+                    {e.tech.api.map((item) => <span class="pill api">{item}</span>)}
+                    {e.tech.other.map((item) => <span class="pill">{item}</span>)}
+                </div>
+            </div>
+        </a>
+    );
 
-export default function Accordion() {
     return(
-        <div className={everythingStyle.accordionscreen}>
-            <div className={everythingStyle.accordion}>
-                <input type="checkbox" id="chck1" />
-                <label className={everythingStyle.accordiontab} htmlFor="chck1">Work Experience</label>
-                <ul className={everythingStyle.accordioncontent}>
-                    <img src={hines_img} alt="Hines Interests LP" />
-                    <li className={everythingStyle.texthls}>
-                        Hines Interests LP | Software Development Intern
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Main Technology: Django
-                    </li>
-                </ul>
-            </div>
-            <div className={everythingStyle.divider} />
-            <div className={everythingStyle.accordion}>
-                <input type="checkbox" id="chck2" />
-                <label className={everythingStyle.accordiontab} htmlFor="chck2">Hackathon Experience</label>
-                <ul className={everythingStyle.accordioncontent}>
-                    <img src={flutter_img} alt="Flutter" />
-                    <li className={everythingStyle.texthls}>
-                        Flutter
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Proficient Experience
-                    </li>
-                    <li>&nbsp;</li>
-                    <img src={firebase_img} alt="Firebase" />
-                    <li className={everythingStyle.texthls}>
-                        Firebase
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Proficient Experience
-                    </li>
-                </ul>
-            </div>
-            <div className={everythingStyle.divider} />
-            <div className={everythingStyle.accordion}>
-                <input type="checkbox" id="chck3" />
-                <label className={everythingStyle.accordiontab} htmlFor="chck3">Project Experience</label>
-                <ul className={everythingStyle.accordioncontent}>
-                    <img src={opencv_img} alt="OpenCV" />
-                    <li className={everythingStyle.texthls}>
-                        OpenCV
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Moderate Experience
-                    </li>
-                    <li>&nbsp;</li>
-                    <img src={pytorch_img} alt="PyTorch" />
-                    <li className={everythingStyle.texthls}>
-                        PyTorch
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Limited Experience
-                    </li>
-                    <li>&nbsp;</li>
-                    <img src={react_img} alt="React" />
-                    <li className={everythingStyle.texthls}>
-                        React
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Moderate Experience
-                    </li>
-                </ul>
-            </div>
-            <div className={everythingStyle.divider} />
-            <div className={everythingStyle.accordion}>
-                <div className={everythingStyle.sidebar}></div>
-                <input type="checkbox" id="chck4" />
-                <label className={everythingStyle.accordiontab} htmlFor="chck4">Other Experience</label>
-                <ul className={everythingStyle.accordioncontent}>
-                    <img src={python_img} alt="Python" />
-                    <li className={everythingStyle.texthls}>
-                        Python
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Proficient Experience
-                    </li>
-                    <li>&nbsp;</li>
-                    <img src={javascript_img} alt="JavaScript" />
-                    <li className={everythingStyle.texthls}>
-                        Javascript
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Proficient Experience
-                    </li>
-                    <li>&nbsp;</li>
-                    <img src={java_img} alt="Java" />
-                    <li className={everythingStyle.texthls}>
-                        Java
-                    </li>
-                    <li className={everythingStyle.textnhls}>
-                        Proficient Experience
-                    </li>
-                </ul>
-            </div>
+        <div className={clsx("w-full overflow-hidden", className)}>
+            <input type="checkbox" id={`chck_${index}`} className='accordion-input hidden -z-10 top-0 left-0' onChange={(e) => openSetter(openGetter.map((opened, i) => i===index ? e.target.checked : opened))} />
+            <label className="accordion-tab flex flex-col justify-between pt-8 pb-4 text-3xl text-white/50 font-medium transition-all hover:text-white" htmlFor={`chck_${index}`}>
+                {title}
+            </label>
+            <ul className="accordion-content flex flex-col w-full max-h-0 p-0 pb-4 gap-4 opacity-0 transition-all duration-500">
+                {
+                    note &&
+                    <div className="flex flex-row items-start w-full p-4 gap-2 rounded-md border-2 border-white/30 text-white/80">
+                        <img src="/icons/info.svg" />
+                        <span>{note}</span>
+                    </div>
+                }
+                <div className="grid grid-cols-1 min-[1000px]:grid-cols-2 min-[1366px]:grid-cols-3 min-[1920px]:grid-cols-4 gap-4">
+                    {card}
+                </div>
+            </ul>
         </div>
     );
 }

@@ -1,37 +1,149 @@
 "use client";
 
-import Signature from "../../components/signature";
-import screenStyles from "../../styles/screen.module.css"
-import textStyles from "../../styles/text.module.css"
+import { useState } from "react";
+import clsx from "clsx";
 
 export default function About() {
-  return (
-    <div>
-      <div className={screenStyles.screencontainer}>
-        <Signature>About Me</Signature>
-        <ul className={textStyles.textcontainerlong}>
-          <li className={textStyles.texthls}>
-            A college student always looking forward to learning and working
-            in a team with various skills and ideas for the benefit of the
-            organization and self-growth. Also looking forward to learning
-            software engineering, data science, and computer science where he
-            would be able to learn to utilize his skills.
-          </li>
-          <li className={textStyles.texthls}>&nbsp;</li>
-          <li className={textStyles.texthls}>I am currently a...</li>
-          <li className={textStyles.textnhls}>• student at Texas A&M University</li>
-          <li className={textStyles.textnhls}>• full stack Flutter mobile developer</li>
-          <li className={textStyles.textnhls}>• participant in various hackathons</li>
-          <li className={textStyles.texthls}>&nbsp;</li>
-          <li className={textStyles.texthls}>I am currently learning...</li>
-          <li className={textStyles.textnhls}>• machine learning</li>
-          <li className={textStyles.textnhls}>• web development</li>
-          <li className={textStyles.textnhls}>• computer vision</li>
-          <li className={textStyles.texthls}>&nbsp;</li>
-          <li className={textStyles.texthls}>I am currently working on...</li>
-          <li className={textStyles.textnhls}>• something</li>
-        </ul>
-      </div>
-    </div>
-  );
+    const [selectedImage, setSelectedImage] = useState("");
+
+    const locationDesc = {
+        'tamu.jpg': {
+            title: 'Texas A&M University Engineering Quad',
+            location: 'College Station, Texas, USA'
+        },
+        'tamuhack.jpg': {
+            title: 'Texas A&M University Memorial Student Center (TAMUHack)',
+            location: 'College Station, Texas, USA'
+        },
+        'office.jpg': {
+            title: 'Texas Tower',
+            location: 'Houston, Texas, USA'
+        },
+        'towerview.jpg': {
+            title: 'JPMorgan Chase Tower',
+            location: 'Houston, Texas, USA'
+        },
+        'hiking.jpg': {
+            title: 'Blue Lakes Trail',
+            location: 'Telluride, Colorado, USA'
+        },
+        'austin.jpg': {
+            title: 'Block 185',
+            location: 'Austin, Texas, USA'
+        },
+        'molecules.jpg': {
+            title: 'Perot Museum of Nature and Science',
+            location: 'Dallas, Texas, USA'
+        },
+        'shark.jpg': {
+            title: 'Houston Museum of Natural Science',
+            location: 'Houston, Texas, USA'
+        }
+    }
+    const imgList = Object.keys(locationDesc).map((e) => <img src={`/about/${e}`} className={clsx("absolute left-0 top-0 w-screen h-screen -z-10 object-cover blur-md brightness-50 transition-all", selectedImage===e ? "opacity-100" : "opacity-0")} />);
+
+    return (
+        <div className="xl:flex flex-row justify-center items-center xl:w-screen h-screen pt-28 xl:pt-0 px-8 xl:pr-10 overflow-y-scroll text-white">
+            <div className="flex flex-col xl:items-center xl:px-24 w-full xl:w-5/12">
+                <div className="text-4xl font-light text-white/80">
+                    <div className="flex flex-row"><div className="font-medium text-white keyframe-increase-opacity ml-1.5">I</div><div className="keyframe-slide-from-left">nventive and</div></div>
+                    <div className="flex flex-row"><div className="font-medium text-white keyframe-increase-opacity ml-0.5">a</div><div className="keyframe-slide-from-left">uthentic, but a bit</div></div>
+                    <div className="flex flex-row"><div className="font-medium text-white keyframe-increase-opacity">n</div><div className="keyframe-slide-from-left">ondescript.</div></div>
+                </div>
+            </div>
+            {imgList}
+            <ul className="w-full xl:w-1/2 xl:pr-20 keyframe-text-entry mt-8 mb-4 sm:mb-16 xl:mb-0">
+                <li className="text-base md:text-xl font-medium">
+                    A college student always looking forward to add value to
+                    a team with various skills and ideas for the benefit of the
+                    organization and self-growth. Also looking forward to learning
+                    software engineering, data science, and computer science where he
+                    would be able to learn to utilize his skills.
+                </li>
+                <li className="text-md font-semibold">&nbsp;</li>
+                <li className="text-lg font-semibold">Ian is a...</li>
+                <li className="flex flex-col gap-2">
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("tamu.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            student at Texas A&M University</div>
+                    </div>
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("office.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            full stack developer</div>
+                    </div>
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("tamuhack.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            participant in various hackathons</div>
+                    </div>
+                </li>
+                <li className="text-md font-semibold">&nbsp;</li>
+                <li className="text-lg font-semibold">Ian is currently learning...</li>
+                <li className="flex flex-col gap-2">
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("austin.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            machine learning</div>
+                    </div>
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("molecules.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            blockchain</div>
+                    </div>
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("shark.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            web development</div>
+                    </div>
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("towerview.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            commercial real estate</div>
+                    </div>
+                </li>
+                <li className="text-md font-semibold">&nbsp;</li>
+                <li className="text-lg font-semibold">Ian is currently working on...</li>
+                <li className="flex flex-col gap-2">
+                    <div>
+                        <div
+                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-md font-semibold hover:bg-transparent hover:text-white transition-all"
+                            onMouseEnter={() => setSelectedImage("hiking.jpg")}
+                            onMouseLeave={() => setSelectedImage("")}
+                        >
+                            something</div>
+                    </div>
+                </li>
+            </ul>
+            {
+                selectedImage && 
+                <div className="sm:absolute left-4 bottom-0 mb-8 sm:mb-2 flex flex-col text-sm font-light text-white/80">
+                    <span>{locationDesc[selectedImage].title}</span>
+                    <span className="flex flex-row gap-1"><img src="/icons/location.svg" className="h-5" /> {locationDesc[selectedImage].location}</span>
+                </div>
+            }
+        </div>
+    );
 }
