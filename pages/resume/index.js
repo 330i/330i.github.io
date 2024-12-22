@@ -1,12 +1,15 @@
 "use client"
 
-import { useState } from "react";
+import Head from 'next/head';
 
 import Signature from "/components/signature";
 
 function Career() {
     return(
         <div className="xl:flex flex-row justify-center items-center w-screen xl:h-screen mb-16 xl:mr-10 xl:mb-0">
+            <Head>
+                <title>Ian Kim | Resume</title>
+            </Head>
             <Signature>Career</Signature>
             <ul className="w-full xl:w-1/2 keyframe-text-entry mt-8 xl:mt-0">
                 <li class="text-lg 2xl:text-xl font-semibold">Summer Intern - Application Development, Hines Interests LP | 2022 – 2024 (June – August)</li>

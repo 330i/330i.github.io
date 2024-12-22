@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import clsx from "clsx";
+import Head from 'next/head';
 
 export default function About() {
     const [selectedImage, setSelectedImage] = useState("");
@@ -44,6 +45,9 @@ export default function About() {
 
     return (
         <div className="xl:flex flex-row justify-center items-center xl:w-screen h-screen pt-28 xl:pt-0 px-8 xl:pr-10 overflow-y-scroll text-white">
+            <Head>
+                <title>Ian Kim | About</title>
+            </Head>
             <div className="flex flex-col xl:items-center xl:px-24 w-full xl:w-5/12">
                 <div className="text-4xl font-light text-white/80">
                     <div className="flex flex-row"><div className="font-medium text-white keyframe-increase-opacity ml-1.5">I</div><div className="keyframe-slide-from-left">nventive and</div></div>
