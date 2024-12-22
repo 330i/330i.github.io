@@ -2,6 +2,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import Head from 'next/head';
 
 import Bulb from '../components/bulb';
 import Sculpture from '../components/sculpture';
@@ -20,6 +21,9 @@ export default function Home() {
 
     return (
         <div className={clsx("flex justify-center items-center h-screen transition-all", hover && "bg-fuchsia-300")}>
+            <Head>
+                <title>Ian Kim's Website</title>
+            </Head>
             <div className="w-full h-full absolute overflow-hidden left-0">
                 {bulbList}
                 <div style={{width: '100%', height: '100%', backdropFilter: 'blur(100px)', position: 'absolute'}} />

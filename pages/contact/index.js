@@ -1,5 +1,7 @@
 "use client";
 
+import Head from 'next/head';
+
 import Signature from "../../components/signature";
 
 var email_img = "/contact/email.png";
@@ -10,6 +12,9 @@ var devpost_img = "/contact/devpost.png";
 export default function Contact() {
     return(
         <div className="xl:flex flex-row justify-center items-center xl:w-screen h-screen pt-28 xl:pt-0 px-8 xl:pr-10 overflow-y-scroll text-white">
+            <Head>
+                <title>Ian Kim | Contact</title>
+            </Head>
             <Signature>Contact</Signature>
             <div className="xl:w-[52vw] flex flex-col xl:items-center keyframe-text-entry mt-8">
                 <div className="flex flex-col gap-3 xl:w-[30vw]">
