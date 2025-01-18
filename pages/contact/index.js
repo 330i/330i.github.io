@@ -15,9 +15,21 @@ export default function Contact() {
             <Head>
                 <title>Ian Kim | Contact</title>
             </Head>
-            <Signature>Contact</Signature>
+            <div className="flex flex-col xl:items-center xl:px-24 w-full xl:w-5/12">
+                <div className="text-4xl font-light text-white/80">
+                <div className="flex flex-row keyframe-slide-from-bottom">Lets</div>
+                    <div className="flex flex-row font-medium text-white keyframe-increase-opacity">Connect!</div>
+                </div>
+            </div>
             <div className="xl:w-[52vw] flex flex-col xl:items-center keyframe-text-entry mt-8">
                 <div className="flex flex-col gap-3 xl:w-[30vw]">
+                    <div className="flex flex-row items-start w-full p-4 gap-2 rounded-md border-2 border-white/30 text-white/80">
+                        <img src="/icons/info.svg" />
+                        <span>
+                            Feel free to contact me!
+                            Also, if you're in the TAMU campus area and have any questions, I'm also free to discuss it over lunch (or something).
+                        </span>
+                    </div>
                     <a className="flex flex-row items-center keyframe-text-entry" href="mailto:id.kim.dev@proton.me">
                         <img src={email_img} alt="Email" className="h-8 pr-2" />
                         <h1 className="text-lg font-semibold">Email: id.kim.dev@proton.me</h1>

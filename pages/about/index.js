@@ -29,7 +29,7 @@ export default function About() {
             location: 'Telluride, Colorado, USA'
         },
         'austin.jpg': {
-            title: 'Block 185',
+            title: 'The Sailboat Building',
             location: 'Austin, Texas, USA'
         },
         'molecules.jpg': {
@@ -50,19 +50,20 @@ export default function About() {
             </Head>
             <div className="flex flex-col xl:items-center xl:px-24 w-full xl:w-5/12">
                 <div className="text-4xl font-light text-white/80">
-                    <div className="flex flex-row"><div className="font-medium text-white keyframe-increase-opacity ml-1.5">I</div><div className="keyframe-slide-from-left">nventive and</div></div>
-                    <div className="flex flex-row"><div className="font-medium text-white keyframe-increase-opacity ml-0.5">a</div><div className="keyframe-slide-from-left">uthentic, but a bit</div></div>
-                    <div className="flex flex-row"><div className="font-medium text-white keyframe-increase-opacity">n</div><div className="keyframe-slide-from-left">ondescript.</div></div>
+                <div className="flex flex-row keyframe-increase-opacity">Howdy.</div>
+                    <div className="flex flex-row"><div className="keyframe-slide-from-right mr-2">I'm</div><div className="keyframe-increase-opacity"><span className="font-medium text-white">Ian</span>.</div></div>
+                    <div className="flex flex-row keyframe-slide-from-top">Nice to meet you!</div>
                 </div>
             </div>
             {imgList}
             <ul className="w-full xl:w-1/2 xl:pr-20 keyframe-text-entry mt-8 mb-4 sm:mb-16 xl:mb-0">
                 <li className="text-base md:text-base font-medium">
-                    A college student always looking forward to add value to
+                    A college student, full stack developer, and a team player.
+                    I'm always looking forward to add value to
                     a team with various skills and ideas for the benefit of the
                     organization and self-growth. Also looking forward to learning
-                    software engineering, data science, and computer science where he
-                    would be able to learn to utilize his skills.
+                    software engineering, data science, and computer science.
+                    However, I also love to learn topics from different perspectives.
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>
                 <li className="text-base font-semibold">Ian is a...</li>
