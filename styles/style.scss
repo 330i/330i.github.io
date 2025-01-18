@@ -11,6 +11,14 @@
     animation: 0.6s ease-in-out 0s 1 slideInFromLeft;
 }
 
+.keyframe-slide-from-top {
+    animation: 0.6s ease-in-out 0s 1 slideInFromTop;
+}
+
+.keyframe-slide-from-bottom {
+    animation: 0.6s ease-in-out 0s 1 slideInFromBottom;
+}
+
 .keyframe-increase-scale {
     animation: 0.6s ease-in-out 0s 1 increaseScale;
 }
@@ -55,6 +63,34 @@
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
         opacity: 1;
     }
 }
