@@ -110,7 +110,7 @@ export default function About() {
                             onMouseEnter={() => setSelectedImage("molecules.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
-                            blockchain</div>
+                            cryptography</div>
                     </div>
                     <div>
                         <div

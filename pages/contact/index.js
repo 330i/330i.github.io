@@ -23,13 +23,21 @@ export default function Contact() {
             </div>
             <div className="xl:w-[52vw] flex flex-col xl:items-center keyframe-text-entry mt-8">
                 <div className="flex flex-col gap-3 xl:w-[30vw]">
+                    <div className="flex flex-row items-start w-full p-4 gap-2 rounded-md border-2 border-white/30 text-white/80">
+                        <img src="/icons/info.svg" />
+                        <span className="text-sm">
+                            If you want my Instagram for some reason, you can find it <a className="underline" href="https://www.instagram.com/supersuriken/">here</a>.
+                            It's pretty much like finding a dusty, empty album in the attic since I never really used social media except LinkedIn and YouTube.
+                            Who knows? I might start using it as a non-corporate/non-academic messaging medium.
+                        </span>
+                    </div>
                     <a className="flex flex-row items-center keyframe-text-entry" href="mailto:id.kim.dev@proton.me">
                         <img src={email_img} alt="Email" className="h-8 pr-2" />
                         <h1 className="text-lg font-semibold">Email: id.kim.dev@proton.me</h1>
                     </a>
                     <a className="flex flex-row items-center keyframe-text-entry" href="https://www.linkedin.com/in/ian-kim-4130501a5/">
                         <img src={linkedin_img} alt="Linkedin" className="h-8 pr-2" />
-                        <h1 className="text-lg font-semibold">Linkedin</h1>
+                        <h1 className="text-lg font-semibold">LinkedIn</h1>
                     </a>
                     <a className="flex flex-row items-center keyframe-text-entry" href="https://github.com/330i">
                         <img src={github_img} alt="Github" className="h-8 pr-2" />
