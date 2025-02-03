@@ -14,7 +14,8 @@
                 "backend": ["Django"],
                 "api": [],
                 "other": []
-            }
+            },
+            "link": "https://www.hines.com/"
         }
     ],
     "Project Experience": [
@@ -80,7 +81,8 @@
                 "backend": ["Firebase"],
                 "api": ["Open Location Code", "Google Sign-In"],
                 "other": []
-            }
+            },
+            "link": "https://github.com/330i/ParkingProject"
         },
         {
             "title": "CRHS Parking App",
@@ -97,7 +99,8 @@
                 "backend": ["Firebase"],
                 "api": ["Google Sign-In"],
                 "other": []
-            }
+            },
+            "link": "https://github.com/enkyuan/crhs_parking"
         }
     ],
     "Hackathon Experience": [
