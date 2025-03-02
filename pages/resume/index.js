@@ -192,7 +192,6 @@ export default function Resume() {
                 className="flex-1 h-full m-0 px-8 pt-28 xl:px-0 xl:pt-0 max-xl:divide-y-2 divide-white/50 xl:snap-mandatory snap-y overflow-y-scroll overflow-x-hidden text-white"
                 onScroll={(e) => {
                     setScrollProgress(e.target.scrollTop/window.innerHeight);
-                    console.log([0, 1, 2, 3].map((v) => 1-scrollProgress+v-1))
                     setIsEntry(false);
                 }}
             >
