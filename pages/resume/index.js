@@ -3,15 +3,13 @@
 import Head from 'next/head';
 
 import Signature from "/components/signature";
+import { useState } from 'react';
+import clsx from 'clsx';
 
 function Career() {
     return(
         <div className="xl:flex flex-row justify-center items-center w-screen xl:h-screen mb-16 xl:mr-10 xl:mb-0">
-            <Head>
-                <title>Ian Kim | Resume</title>
-            </Head>
-            <Signature>Career</Signature>
-            <ul className="w-full xl:w-1/2 keyframe-text-entry mt-8 xl:mt-0">
+            <ul className="w-full keyframe-text-entry mt-8 xl:mt-0">
                 <li class="text-lg 2xl:text-xl font-semibold">Summer Intern - Application Development, Hines Interests LP | 2022 – 2024 (June – August)</li>
                 <ul className="list-disc ml-8 max-w-4xl">
                     <li>
@@ -47,8 +45,7 @@ function Career() {
 function Education() {
     return (
         <div className="xl:flex flex-row justify-center items-center w-screen xl:h-screen my-16 xl:mr-10 xl:my-0">
-            <Signature>Education</Signature>
-            <ul className="w-full xl:w-1/2 keyframe-text-entry mt-8 xl:mt-0">
+            <ul className="w-full keyframe-text-entry mt-8 xl:mt-0">
                 <li className="text-lg 2xl:text-xl font-semibold">
                     Cinco Ranch High School, Katy, TX | August 2018 - May 2022
                 </li>
@@ -68,8 +65,7 @@ function Education() {
 function Awards() {
     return (
         <div className="xl:flex flex-row justify-center items-center w-screen xl:h-screen my-16 xl:mr-10 xl:my-0">
-            <Signature>Awards</Signature>
-            <ul className="w-full xl:w-1/2 keyframe-text-entry mt-8">
+            <ul className="w-full keyframe-text-entry mt-8">
                 <li className="text-lg 2xl:text-xl font-semibold">
                     The Square Small Business Hackathon | Jan 22, 2020 | Online / International
                 </li>
@@ -110,8 +106,7 @@ function Awards() {
 function HNA() {
     return (
         <div className="xl:flex flex-row justify-center items-center w-screen xl:h-screen my-16 xl:mr-10 xl:my-0">
-            <Signature>Honors and<br />Activities</Signature>
-            <ul className="w-full xl:w-1/2 keyframe-text-entry mt-8">
+            <ul className="w-full keyframe-text-entry mt-8">
                 <li className="text-lg 2xl:text-xl font-semibold">
                     CRyptonite Robotics | September 2018 – May 2019
                 </li>
@@ -175,9 +170,32 @@ function HNA() {
 
 
 export default function Resume() {
+    const titleList = [<span>Career</span>, <span>Education</span>, <span>Awards</span>, <span>Honors and<br />Activities</span>];
+    const pageNameList = ["Career", "Education", "Awards", "Honors and Activities"];
+    const [isEntry, setIsEntry] = useState(true);
+    const [scrollProgress, setScrollProgress] = useState(0);
+
     return(
-        <div className="flex flex-row justify-center items-center w-full h-screen overflow-x-hidden">
-            <div className="flex-1 h-full m-0 px-8 pt-28 xl:px-0 xl:pt-0 max-xl:divide-y-2 divide-white/50 xl:snap-mandatory snap-y overflow-y-scroll overflow-x-hidden text-white">
+        <div className="flex flex-row justify-center items-center w-full h-screen overflow-x-hidden text-white">
+            <Head>
+                <title>Ian Kim | Resume</title>
+            </Head>
+            <div className="hidden xl:block w-5/12">
+                {titleList.map((e, i) => <Signature
+                                            className={clsx(Math.floor(scrollProgress)==i ? "opacity-100" : "opacity-0", "transition-opacity duration-300 absolute left-0 top-0")}
+                                            pageName={pageNameList[i]}
+                                            isEntry={isEntry}
+                                            scale={1-scrollProgress+i}
+                                        >{e}</Signature>)}
+            </div>
+            <div
+                className="flex-1 h-full m-0 px-8 pt-28 xl:px-0 xl:pt-0 max-xl:divide-y-2 divide-white/50 xl:snap-mandatory snap-y overflow-y-scroll overflow-x-hidden text-white"
+                onScroll={(e) => {
+                    setScrollProgress(e.target.scrollTop/window.innerHeight);
+                    console.log([0, 1, 2, 3].map((v) => 1-scrollProgress+v-1))
+                    setIsEntry(false);
+                }}
+            >
                 <section className="flex items-center relative xl:snap-start">
                     <Career />
                 </section>

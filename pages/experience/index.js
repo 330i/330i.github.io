@@ -9,14 +9,13 @@ import Signature from "../../components/signature";
 
 export default function Experience() {
     const [accordionOpened, setAccordionOpened] = useState([false, false, false]);
-    console.log(accordionOpened)
 
     return(
         <div className={clsx(accordionOpened.some((e) => e) ? "justify-start items-start" : "justify-center items-center", "xl:flex flex-row w-screen h-screen pt-28 pb-16 overflow-y-scroll text-white transition-all")}>
             <Head>
                 <title>Ian Kim | Dev Experience</title>
             </Head>
-            <Signature className={clsx(accordionOpened.some((e) => e) && "opacity-0 !w-0 !px-0", "hidden xl:flex transition-all duration-500")}>Developer<br />Experience</Signature>
+            <Signature className={clsx(accordionOpened.some((e) => e) && "opacity-0 !w-0 !px-0", "hidden xl:flex transition-all duration-500")} pageName="Dev Experience">Developer<br />Experience</Signature>
             <div className={clsx(accordionOpened.some((e) => e) ? "xl:!px-24" : "xl:px-0 xl:w-[52vw]", "flex flex-col divide-y-2 divide-white/50 justify-center items-center w-full px-8 xl:pr-10 keyframe-text-entry transition-all duration-500")}>
                 <Accordion title="Work Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={0} note={"Of course, this is a very general and limited overview; many projects are internal. The screenshots are not part of the application. However, it is somewhat related to things I've built."} />
                 <Accordion title="Project Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={1} note={"Unfortunately, some academic projects have been made private by either the class administrator or me to protect academic integrity."} />
