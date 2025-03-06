@@ -58,12 +58,10 @@ export default function About() {
             {imgList}
             <ul className="w-full xl:w-1/2 xl:pr-20 keyframe-text-entry mt-8 mb-4 sm:mb-16 xl:mb-0">
                 <li className="text-base md:text-base font-medium">
-                    A college student, full stack developer, and a team player.
-                    I'm always looking forward to add value to
-                    a team with various skills and ideas for the benefit of the
-                    organization and self-growth. Also looking forward to learning
-                    software engineering, data science, and computer science.
-                    However, I also love to learn topics from different perspectives.
+                    A college student, full stack developer, and a team member.
+                    I'm always looking forward to add value with various skills and ideas for the benefit of the organization and self-growth.
+                    Currently learning software engineering, data science, and computer science.
+                    I also love to learn different topics from new perspectives.
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>
                 <li className="text-base font-semibold">Ian is a...</li>
@@ -94,7 +92,7 @@ export default function About() {
                     </div>
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>
-                <li className="text-base font-semibold">Ian is currently learning...</li>
+                <li className="text-base font-semibold">Ian is interested in...</li>
                 <li className="flex flex-col gap-2">
                     <div>
                         <div
