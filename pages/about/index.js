@@ -61,7 +61,7 @@ export default function About() {
                     A college student, full stack developer, and a team member.
                     I'm always looking forward to add value with various skills and ideas for the benefit of the organization and self-growth.
                     Currently learning software engineering, data science, and computer science.
-                    I also love to learn different topics from new perspectives.
+                    But, I also enjoy learning different topics from new perspectives.
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>
                 <li className="text-base font-semibold">Ian is a...</li>
