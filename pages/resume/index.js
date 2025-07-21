@@ -25,15 +25,16 @@ function Career() {
                             <li>Worked on development sprints for software assisting real estate and accounting interests of Hines.</li>
                             <li>Participated in the initial frontend transition from Jinja and jQuery to Next.js.</li>
                             <li>Participated in client meetings. Recognized and implemented provided requirements.</li>
+                            <li>Understood the basics of commercial real estate through the first week training.</li>
                         </ul>
                     </li>
                     <li>
                         <h3 class="text-base 2xl:text-lg font-semibold">June 2024 - August 2024</h3>
                         <ul className="text-sm 2xl:text-base list-disc ml-8">
                             <li>Worked on development sprints for software assisting real estate product lifecycle.</li>
-                            <li>Helped monitor and respond to issues involving the transition of database systems.</li>
-                            <li>Worked on the initial implementation of a map feature.</li>
-                            <li>Understood the basics of commercial real estate through the first week training and Eastdil Secured Virtual Real Estate Finance Training Program.</li>
+                            <li>Helped monitor and respond to software usage issues in preparation of transitioning database and storage systems.</li>
+                            <li>Worked on the initial implementation of a global property mapping feature.</li>
+                            <li>Continued learning commercial real estate basics through the first week training and Eastdil Secured Virtual Real Estate Finance Training Program.</li>
                         </ul>
                     </li>
                 </ul>
@@ -54,7 +55,7 @@ function Education() {
                     Texas A&M University | August 2022 - 
                 </li>
                 <ul className="list-disc ml-8">
-                    <li className="text-base 2xl:text-lg font-semibold">Computer Science - BS</li>
+                    <li className="text-base 2xl:text-lg font-semibold">Computer Science - Bachelor of Science</li>
                     <li className="text-base 2xl:text-lg">Business - Minor</li>
                 </ul>
             </ul>
