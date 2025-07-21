@@ -75,7 +75,7 @@ function IntroText({ hover, position, children }) {
     });
 
     return (
-        <Text ref={ref} position={position} font="/inter_bold.ttf" fontSize={2.5} color="a7aeff" fillOpacity={0.5}>{children}</Text>
+        <Text ref={ref} position={position} font="/inter_bold.ttf" fontSize={2.3} color="a7aeff" fillOpacity={0.5}>{children}</Text>
     );
 }
 
@@ -123,9 +123,9 @@ export default function Sculpture({ hover }) {
             <Suspense fallback={null}>
                 {cloudList}
             </Suspense>
-            <IntroText hover={hover} position={[0, 2.3, -15]}>My Bubble</IntroText>
+            <IntroText hover={hover} position={[0, 2.1, -15]}>My Bubble</IntroText>
             <IntroText hover={hover} position={[0, 0, -15]}>of the</IntroText>
-            <IntroText hover={hover} position={[0, -2.3, -15]}>Internet</IntroText>
+            <IntroText hover={hover} position={[0, -2.1, -15]}>Internet</IntroText>
         </Canvas>
     );
 }
