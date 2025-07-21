@@ -92,7 +92,7 @@ export default function About() {
                     </div>
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>
-                <li className="text-base font-semibold">Ian is interested in...</li>
+                <li className="text-base font-semibold">Ian has completed...</li>
                 <li className="flex flex-col gap-2">
                     <div>
                         <div
@@ -100,7 +100,7 @@ export default function About() {
                             onMouseEnter={() => setSelectedImage("austin.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
-                            machine learning</div>
+                            CSCE 421 Machine Learning</div>
                     </div>
                     <div>
                         <div
@@ -108,7 +108,7 @@ export default function About() {
                             onMouseEnter={() => setSelectedImage("molecules.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
-                            cryptography</div>
+                            CSCE 449 Applied Cryptography</div>
                     </div>
                     <div>
                         <div
@@ -116,7 +116,7 @@ export default function About() {
                             onMouseEnter={() => setSelectedImage("shark.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
-                            web development</div>
+                            CSCE 331 Foundations of Software Engineering</div>
                     </div>
                     <div>
                         <div
@@ -124,7 +124,7 @@ export default function About() {
                             onMouseEnter={() => setSelectedImage("towerview.jpg")}
                             onMouseLeave={() => setSelectedImage("")}
                         >
-                            commercial real estate</div>
+                            CSCE 411 Design and Analysis of Algorithms</div>
                     </div>
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>
