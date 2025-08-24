@@ -50,18 +50,21 @@ export default function About() {
             </Head>
             <div className="flex flex-col xl:items-center xl:px-24 w-full xl:w-5/12">
                 <div className="text-4xl font-light text-white/80">
-                <div className="flex flex-row keyframe-increase-opacity">Howdy.</div>
+                <div className="flex flex-row keyframe-increase-opacity">Hi!</div>
                     <div className="flex flex-row"><div className="keyframe-slide-from-right mr-2">I'm</div><div className="keyframe-increase-opacity"><span className="font-medium text-white">Ian</span>.</div></div>
-                    <div className="flex flex-row keyframe-slide-from-top">Nice to meet you!</div>
+                    <div className="flex flex-row keyframe-slide-from-top">Nice to meet you.</div>
                 </div>
             </div>
             {imgList}
             <ul className="w-full xl:w-1/2 xl:pr-20 keyframe-text-entry mt-8 mb-4 sm:mb-16 xl:mb-0">
-                <li className="text-base md:text-base font-medium">
-                    A college student, full stack developer, and a team member.
-                    I'm always looking forward to add value with various skills and ideas for the benefit of the organization and self-growth.
-                    Currently learning software engineering, data science, and computer science.
-                    But, I also enjoy learning different topics from new perspectives.
+                <li className="text-base md:text-base font-medium flex flex-col gap-2">
+                    <div>
+                        Currently a Class of '26 Computer Science student at Texas A&M University.
+                        My main area of interest is software engineering (mainly full stack with some form of React frontend and Python backend) as well as some computer science areas like machine learning, networking, and computation processes.
+                    </div>
+                    <div>
+                        Outside of computer science, I've been somewhat interested in learning automotive engineering and commercial real estate (in relation to a previous internship).
+                    </div>
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>
                 <li className="text-base font-semibold">Ian is a...</li>
@@ -81,14 +84,6 @@ export default function About() {
                             onMouseLeave={() => setSelectedImage("")}
                         >
                             full stack developer</div>
-                    </div>
-                    <div>
-                        <div
-                            className="inline-block rounded-md px-2 py-1 bg-white text-black text-sm font-semibold hover:bg-transparent hover:text-white transition-all"
-                            onMouseEnter={() => setSelectedImage("tamuhack.jpg")}
-                            onMouseLeave={() => setSelectedImage("")}
-                        >
-                            participant in various hackathons</div>
                     </div>
                 </li>
                 <li className="text-base font-semibold">&nbsp;</li>

@@ -1,8 +1,11 @@
 "use client"
 
+import clsx from 'clsx';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function TopBar() {
+    const pathname = usePathname();
 
     return (
         <div className="text-white">
@@ -42,7 +45,7 @@ export default function TopBar() {
                     </div>
                 </div>
             </div>
-            <div className="absolute top-0 left-0 flex flex-row justify-between items-center w-screen px-24 py-4 -mt-32 opacity-0 xl:mt-0 xl:opacity-100 bg-zinc-800/20 backdrop-blur-sm transition-all duration-500">
+            <div className={clsx("absolute top-0 left-0 flex flex-row justify-between items-center w-screen px-24 py-4 -mt-32 opacity-0 xl:mt-0 backdrop-blur-sm transition-all duration-500", pathname == '/' ?  'xl:opacity-25 hover:xl:opacity-100 hover:bg-zinc-800/5' : 'xl:opacity-100 bg-zinc-800/20')}>
                 <div className="flex flex-row justify-center w-40">
                     <Link className="barbtn relative block text-base font-semibold py-2 transition-all" href='/resume'>
                         Resume
