@@ -109,22 +109,6 @@ function HNA() {
         <div className="xl:flex flex-row justify-center items-center w-screen xl:h-screen my-16 xl:mr-10 xl:my-0">
             <ul className="w-full keyframe-text-entry mt-8">
                 <li className="text-lg 2xl:text-xl font-semibold">
-                    CRyptonite Robotics | September 2018 – May 2019
-                </li>
-                <ul className="list-disc ml-8">
-                    <li className="text-base 2xl:text-lg">30 weeks / year, 1-4 hours / week</li>
-                    <ul className="list-disc ml-6">
-                        <li className="text-sm 2xl:text-base">Computer-aided design</li>
-                        <li className="text-sm 2xl:text-base">Learned and used SolidWorks</li>
-                    </ul>
-                    <li className="text-base 2xl:text-lg">Volunteer Hours from Neighborhood Kidz Club: 12 hours</li>
-                    <ul className="list-disc ml-6">
-                        <li className="text-sm 2xl:text-base">Helped children with various activities including science experiments</li>
-                        <li className="text-sm 2xl:text-base">Helped clean up after activities</li>
-                    </ul>
-                </ul>
-                <li>&nbsp;</li>                
-                <li className="text-lg 2xl:text-xl font-semibold">
                     CRHS Innovation and Development Association | September 2019 – May 2022
                 </li>
                 <ul className="list-disc ml-8">
@@ -155,6 +139,22 @@ function HNA() {
                         <li className="text-sm 2xl:text-base">
                             Taught p5.js, Java, and Flutter.
                         </li>
+                    </ul>
+                </ul>
+                <li>&nbsp;</li>
+                <li className="text-lg 2xl:text-xl font-semibold">
+                    CRyptonite Robotics | September 2018 – May 2019
+                </li>
+                <ul className="list-disc ml-8">
+                    <li className="text-base 2xl:text-lg">30 weeks / year, 1-4 hours / week</li>
+                    <ul className="list-disc ml-6">
+                        <li className="text-sm 2xl:text-base">Computer-aided design</li>
+                        <li className="text-sm 2xl:text-base">Learned and used SolidWorks</li>
+                    </ul>
+                    <li className="text-base 2xl:text-lg">Volunteer Hours from Neighborhood Kidz Club: 12 hours</li>
+                    <ul className="list-disc ml-6">
+                        <li className="text-sm 2xl:text-base">Helped children with various activities including science experiments</li>
+                        <li className="text-sm 2xl:text-base">Helped clean up after activities</li>
                     </ul>
                 </ul>
                 <li>&nbsp;</li>
