@@ -3,33 +3,25 @@
 import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import * as THREE from 'three';
-import { Blocks, Mac, Teapot, Tower, Wobble } from "./threeobj";
+import { Blocks, Mac, Teapot, Tower, Wobble, ContactIcon } from "./threeobj";
 
 export default function Signature({ children, className, pageName, isEntry=true, scale=1 }) {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(60);
 
     const pageThreeList = {
-        "Career": {
-            "element": <Tower scale={Math.abs(scale)} />,
-            "cameraPosition": [0, 1, 100]
-        },
-        "Education": {
+        "Resume": {
             "element": <Blocks scale={Math.abs(scale)} />,
             "cameraPosition": [0, 50, 100]
-        },
-        "Awards": {
-            "element": <Wobble scale={Math.abs(scale)} />,
-            "cameraPosition": [0, 1, 100]
-        },
-        "Honors and Activities": {
-            "element": <Teapot scale={Math.abs(scale)} />,
-            "cameraPosition": [0, 1, 100]
         },
         "Dev Experience": {
             "element": <Mac camera={camera} scene={scene} />,
             "cameraPosition": [0, 1, 6]
         },
+        "Contact": {
+            "element": <ContactIcon camera={camera} scene={scene} />,
+            "cameraPosition": [0, 1, 7]
+        }
     }
 
     camera.position.set(...pageThreeList[pageName].cameraPosition);
