@@ -70,6 +70,63 @@ function Mac({ camera, scene }) {
     );
 }
 
+function ContactIcon({ camera, scene }) {
+    const ref = useRef();
+    const { nodes } = useGLTF("/icons/contact.glb");
+
+    const intersectionPoint = new THREE.Vector3();
+    const planeNormal = new THREE.Vector3();
+    const plane = new THREE.Plane();
+    const mousePosition = new THREE.Vector2();
+    const raycaster = new THREE.Raycaster();
+    
+    useEffect(() => {
+        window.addEventListener('mousemove', function (e) {
+            mousePosition.x = (e.clientX / window.innerWidth) * 2 - 0.5;
+            mousePosition.y = -(e.clientY / window.innerHeight) * 2 + 1;
+            planeNormal.copy(camera.position).normalize();
+            plane.setFromNormalAndCoplanarPoint(planeNormal, scene.position);
+            raycaster.setFromCamera(mousePosition, camera);
+            raycaster.ray.intersectPlane(plane, intersectionPoint);
+        });
+    });
+
+    useFrame((state, delta) => {
+        ref.current.lookAt(intersectionPoint.x, intersectionPoint.y, 10);
+    });
+
+    return (
+        <group>
+            <mesh {...nodes.body} scale={1} position={[0, 0, 0]} rotation={[0, 0, 0]}>
+                <meshStandardMaterial emissive="#ffffff" emissiveIntensity={1} color="#ffffff" />
+            </mesh>
+            <mesh {...nodes.head} scale={1} position={[0, 0, 0]} rotation={[0, 0, 0]} ref={ref}>
+                <MeshTransmissionMaterial
+                    thickness={0.5}
+                    roughness={0.5}
+                    transmission={1}
+                    ior={1.7}
+                    chromaticAberration={0.02}
+                    backside={true}
+                    backsideThickness={0.1}
+                    distortion={0.5}
+                    distortionScale={1}
+                    color="#000000"
+                />
+                <Edges 
+                    lineWidth={1}
+                    color="#ffffff"
+                />
+            </mesh>
+            <ambientLight color="#ffffff" intensity={1.5} />
+            <EffectComposer disableNormalPass>
+                <Bloom mipmapBlur levels={1} intensity={0.5} />
+                <ToneMapping />
+            </EffectComposer>
+        </group>
+    );
+}
+
 function Tower({ scale }) {
     const ref = useRef();
     const { nodes } = useGLTF("/icons/tower.glb");
@@ -409,4 +466,4 @@ function EntryText({ position, color, hoverColor, fontSize, isClickable, buttonW
     );
 }
 
-export { Mac, Tower, Blocks, Wobble, Teapot, GlassCity, GlassTower, GlassTorus, HoverText, EntryText }
+export { Mac, ContactIcon, Tower, Blocks, Wobble, Teapot, GlassCity, GlassTower, GlassTorus, HoverText, EntryText }

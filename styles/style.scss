@@ -206,3 +206,46 @@
 .pill.backend {
     background-color: #af52de;
 }
+
+.blog-box {
+    h1 {
+        color: #fae8ff;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 24px !important;
+        }
+    }
+    h1:not(:first-child) {
+        margin-top: 32px;
+    }
+
+    h2 {
+        color: #e0e7ff;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 16px;
+        margin-bottom: -4px;
+    }
+
+    a {
+        color: #00bcff;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: #0084d1;
+    }
+
+    ul {
+        list-style-type: disc !important;
+        margin-left: 16px;
+    }
+
+    ol {
+        list-style-type: decimal !important;
+        margin-left: 16px;
+    }
+}

@@ -4,7 +4,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import Head from 'next/head';
 
-export default function About() {
+export default function Page() {
     const [selectedImage, setSelectedImage] = useState("");
 
     const locationDesc = {

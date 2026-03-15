@@ -9,18 +9,13 @@ var linkedin_img = "/contact/linkedin.png";
 var github_img = "/contact/github.png";
 var devpost_img = "/contact/devpost.png";
 
-export default function Contact() {
+export default function Page() {
     return(
         <div className="xl:flex flex-row justify-center items-center xl:w-screen h-screen pt-28 xl:pt-0 px-8 xl:pr-10 overflow-y-scroll text-white">
             <Head>
                 <title>Ian Kim | Contact</title>
             </Head>
-            <div className="flex flex-col xl:items-center xl:px-24 w-full xl:w-5/12">
-                <div className="text-4xl font-light text-white/80">
-                    <div className="flex flex-row keyframe-slide-from-bottom">Feel free to</div>
-                    <div className="flex flex-row"><span className="font-medium text-white keyframe-increase-opacity">contact</span><div className="keyframe-slide-from-left ml-2"> me!</div></div>
-                </div>
-            </div>
+            <Signature className="flex flex-col xl:items-center xl:px-24 w-full xl:w-5/12 max-xl:h-auto" pageName="Contact">Contact</Signature>
             <div className="xl:w-[52vw] flex flex-col xl:items-center keyframe-text-entry mt-8">
                 <div className="flex flex-col gap-3 xl:w-[30vw]">
                     <a className="flex flex-row items-center keyframe-text-entry" href="mailto:id.kim.dev@proton.me">

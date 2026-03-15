@@ -183,4 +183,40 @@
 
 .pill.backend {
   background-color: #af52de;
+}
+
+.blog-box h1 {
+  color: #fae8ff;
+  font-size: 32px;
+  font-weight: 500;
+}
+@media screen and (max-width: 600px) {
+  .blog-box h1 {
+    font-size: 24px !important;
+  }
+}
+.blog-box h1:not(:first-child) {
+  margin-top: 32px;
+}
+.blog-box h2 {
+  color: #e0e7ff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: -4px;
+}
+.blog-box a {
+  color: #00bcff;
+  text-decoration: underline;
+}
+.blog-box a:hover {
+  color: #0084d1;
+}
+.blog-box ul {
+  list-style-type: disc !important;
+  margin-left: 16px;
+}
+.blog-box ol {
+  list-style-type: decimal !important;
+  margin-left: 16px;
 }/*# sourceMappingURL=style.css.map */

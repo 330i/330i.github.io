@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Accordion from "../../components/accordion";
 import Signature from "../../components/signature";
 
-export default function Experience() {
+export default function Page() {
     const [accordionOpened, setAccordionOpened] = useState([false, false, false]);
 
     return(

@@ -1,7 +1,6 @@
 @use "style.css";
-
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@use "tailwind.css";
+@use "starry-night-dark.css";
 
 :root {
     font-family: "Inter", sans-serif;
@@ -17,6 +16,12 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.handwritten {
+    font-family: "Reenie Beanie", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 *::-webkit-scrollbar {
