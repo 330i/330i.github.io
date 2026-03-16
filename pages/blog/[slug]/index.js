@@ -116,7 +116,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const blogData = await getRawData("blog.json").then(response => response.text());
+    const blogData = await getRawData("blog.json").then(response => response.json());
 
     // Map the data to the required format
     const paths = Object.keys(blogData).map((key) => ({
