@@ -1,14 +1,15 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 
-import projectData from "../data/experience.json";
+import { getRawData, getResourceLink } from "../utilities/retriever";
 
-export default function Accordion({ title, openGetter, openSetter, index, note, className }) {
+export default function Accordion({ title, openGetter, openSetter, index, note, className, projectData }) {
 
     const card = projectData[title].map((e) => 
         <a href={Object.hasOwn(e, 'link') ? e.link : null} target="_blank" class="project-box grid overflow-hidden md:min-w-96 min-h-96 rounded-2xl shadow-lg transition-all">
-            <img class="project-img col-start-1 row-start-1 w-full h-full rounded-2xl object-cover blur-lg transition-all -z-10" title="Project Image" src={e.image} />
+            <img class="project-img col-start-1 row-start-1 w-full h-full rounded-2xl object-cover blur-lg transition-all -z-10" title="Project Image" src={getResourceLink(e.image)} />
             <div class="project-desc col-start-1 row-start-1 flex flex-col p-8 w-full h-full rounded-2xl overflow-y-hidden bg-zinc-800/50">
                 <span class="text-xl md:text-2xl leading-none mb-1">{e.title} <span class="text-xs md:text-sm text-nowrap">{e.date}</span></span>
                 <span class="text-sm md:text-base font-medium">{e.location}</span>

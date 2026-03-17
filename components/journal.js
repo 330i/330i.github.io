@@ -110,6 +110,17 @@ function ImageBlock({ src, desc, origin }) {
     const [prevMousePosition, setPrevMousePosition] = useState();
     let isTicking = false;
 
+    const handleOpen = (e) => {
+        e.stopPropagation();
+        setSelected(true);
+    };
+
+    const handleClose = () => {
+        setSelected(false);
+        setZoom(100);
+        setOffset({x: 0, y: 0});
+    };
+
     return (
         <div>
             <div
@@ -143,13 +154,14 @@ function ImageBlock({ src, desc, origin }) {
                         setIsDragging(false);
                         setPrevMousePosition(null);
                     }}
+                    onClick={handleClose}
                 >
                     <img
                         src={src}
                         id={`img-${src}`}
                         className={clsx(selected ? "absolute w-auto select-none" : "w-full", "object-contain")}
                         draggable={false}
-                        onClick={() => setSelected(true)}
+                        onClick={handleOpen}
                         onLoad={(e) => setAspectRatio(e.width / e.height)}
                         style={{
                             minWidth: `${zoom}%`,
@@ -160,12 +172,8 @@ function ImageBlock({ src, desc, origin }) {
                         }}
                     />
                     <div
-                        className={clsx(selected ? "absolute right-4 top-4 w-10 h-10 hover:brightness-150 transition-all cursor-pointer" : "hidden")}
-                        onClick={() => {
-                            setSelected(false);
-                            setZoom(100);
-                            setOffset({x: 0, y: 0});
-                        }}
+                        className={clsx(selected ? "absolute right-20 top-20 w-10 h-10 hover:brightness-150 transition-all cursor-pointer" : "hidden")}
+                        onClick={handleClose}
                     >
                         <img src="/icons/close.svg" className="w-full h-full" />
                     </div>

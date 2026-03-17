@@ -3,6 +3,7 @@
 import Head from 'next/head';
 
 import Signature from "../../components/signature";
+import { getResourceLink } from '../../utilities/retriever';
 
 
 export default function Page() {

@@ -14,4 +14,8 @@ async function getRawData(path) {
     }
 }
 
-export { getRawData };
+function getResourceLink(path) {
+    return `${process.env.NEXT_PUBLIC_TESTING_MODE === "true" ? "/data" : "https://raw.githubusercontent.com/330i/personal-website-data/refs/heads/main"}/${path}`
+}
+
+export { getRawData, getResourceLink };
