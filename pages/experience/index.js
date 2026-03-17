@@ -1,14 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import clsx from "clsx";
 import Head from 'next/head';
 
 import Accordion from "../../components/accordion";
 import Signature from "../../components/signature";
+import { getRawData } from "../../utilities/retriever";
 
 export default function Page() {
     const [accordionOpened, setAccordionOpened] = useState([false, false, false]);
+    const [projectData, setProjectData] = useState();
+
+    const workExperienceNote = "Of course, this is a very general and limited overview; many projects are internal. The screenshots are not part of the application. However, it is somewhat related to things I've built.";
+    const projectExperienceNote = "Unfortunately, some academic projects have been made private by either the class administrator or me to protect academic integrity.";
+    const hackathonExperienceNote = "I will say that I'm not too proud of my hackathon projects. While attending more than a dozen hackathons is an interesting feat, it produced a lot of quantity over quality projects. Also, in many of these hackathons, I didn't have time to learn every part of the tech stack other team members used in these hackathons. So \"Technology Used\" won't mean I've worked with all of them.";
+
+    useEffect(() => {
+        getRawData("experience.json")
+        .then((response) => response.json().then((json) => {
+            setProjectData(json);
+        }))
+    }, [])
 
     return(
         <div className={clsx(accordionOpened.some((e) => e) ? "justify-start items-start" : "justify-center items-center", "xl:flex flex-row w-screen h-screen pt-28 pb-16 overflow-y-scroll text-white transition-all")}>
@@ -17,9 +30,15 @@ export default function Page() {
             </Head>
             <Signature className={clsx(accordionOpened.some((e) => e) && "opacity-0 !w-0 !px-0", "hidden xl:flex transition-all duration-500")} pageName="Dev Experience">Developer<br />Experience</Signature>
             <div className={clsx(accordionOpened.some((e) => e) ? "xl:!px-24" : "xl:px-0 xl:w-[52vw]", "flex flex-col divide-y-2 divide-white/50 justify-center items-center w-full px-8 xl:pr-10 keyframe-text-entry transition-all duration-500")}>
-                <Accordion title="Work Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={0} note={"Of course, this is a very general and limited overview; many projects are internal. The screenshots are not part of the application. However, it is somewhat related to things I've built."} />
-                <Accordion title="Project Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={1} note={"Unfortunately, some academic projects have been made private by either the class administrator or me to protect academic integrity."} />
-                <Accordion title="Hackathon Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={2} note={"I will say that I'm not too proud of my hackathon projects. While attending more than a dozen hackathons is an interesting feat, it produced a lot of quantity over quality projects. Also, in many of these hackathons, I didn't have time to learn every part of the tech stack other team members used in these hackathons. So \"Technology Used\" won't mean I've worked with all of them."} />
+                {
+                    projectData ?
+                    <Fragment>
+                        <Accordion title="Work Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={0} projectData={projectData} note={workExperienceNote} />
+                        <Accordion title="Project Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={1} projectData={projectData} note={projectExperienceNote} />
+                        <Accordion title="Hackathon Experience" openGetter={accordionOpened} openSetter={setAccordionOpened} index={2} projectData={projectData} note={hackathonExperienceNote} />
+                    </Fragment> :
+                    []
+                }
             </div>
         </div>
     );

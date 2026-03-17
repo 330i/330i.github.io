@@ -2,7 +2,7 @@ import { useEffect, useState, Fragment } from "react";
 import clsx from "clsx";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import {compile, run} from "@mdx-js/mdx"
+import {compile, evaluate, run} from "@mdx-js/mdx"
 import * as runtime from "react/jsx-runtime"
 import { CodeBlock, ImageBlock } from "../../../components/journal"
 
@@ -12,16 +12,6 @@ export default function Page({ code }) {
     const router = useRouter();
     const [blogInfo, setBlogInfo] = useState({ "title": "", "date": "", "type": "" });
     const [Content, setContent] = useState(() => Fragment)
-
-    useEffect(() => {
-        ;(async () => {
-            const mod = await run(code, {
-                ...runtime,
-                baseUrl: import.meta.url,
-            })
-            setContent(() => mod.default)
-        })()
-    }, [code]);
 
     useEffect(() => {
         if(router.isReady) {
@@ -37,6 +27,16 @@ export default function Page({ code }) {
                     });
                 }
             });
+
+            getRawData(`blog/${router.query.slug}.mdx`)
+            .then((response) => response.text())
+            .then((text) => {
+                return evaluate((text), {
+                    ...runtime,
+                    baseUrl: import.meta.url,
+                });
+            })
+            .then((mod) => setContent(() => mod.default));
         }
     }, [router.isReady]);
 
@@ -104,28 +104,4 @@ export default function Page({ code }) {
             </div>
         </div>
     );
-}
-
-export async function getStaticProps({ params }) {
-    const code = String(
-        await compile(await (await getRawData(`blog/${params.slug}.mdx`)).text(), {
-            outputFormat: "function-body"
-        })
-    );
-    return {props: {code}}
-}
-
-export async function getStaticPaths() {
-    const blogData = await getRawData("blog.json").then(response => response.json());
-
-    // Map the data to the required format
-    const paths = Object.keys(blogData).map((key) => ({
-        params: { slug: key },
-    }));
-
-
-    return {
-        paths,
-        fallback: false,
-    }
 }
