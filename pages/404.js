@@ -7,13 +7,13 @@ export default function Page() {
     const router = useRouter();
 
     if (router.asPath.includes("blog/")) {
-        window.location.href = window.location.pathname
+        router.push(router.asPath);
     }
 
     return (
         <div className="flex justify-center items-center h-screen transition-all">
             <Head>
-                <title>404</title>
+                <title>Page not found</title>
             </Head>
             <div className="w-full h-full flex flex-col overflow-y-scroll items-center">
                 <div className="w-full min-h-[calc(3.75rem+18rem)] hidden xl:flex flex-col items-center overflow-hidden">
