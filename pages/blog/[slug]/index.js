@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import {compile, evaluate, run} from "@mdx-js/mdx"
 import * as runtime from "react/jsx-runtime"
-import { CodeBlock, ImageBlock } from "../../../components/journal"
+import { CodeBlock, ImageBlock, HoverTextBlock } from "../../../components/journal"
 
 import { getRawData } from "../../../utilities/retriever";
 
@@ -18,25 +18,36 @@ export default function Page({ code }) {
             getRawData("blog.json").then((response) => {
                 if (response) {
                     response.json().then((json) => {
-                        const date = new Date(parseInt(json[router.query.slug].timestamp) * 1000);
-                        setBlogInfo({
-                            "title": json[router.query.slug].title,
-                            "date": date.toLocaleDateString(),
-                            "type": json[router.query.slug].type,
-                        });
+                        if (json[router.query.slug]) {
+                            const date = new Date(parseInt(json[router.query.slug].timestamp) * 1000);
+                            setBlogInfo({
+                                "title": json[router.query.slug].title,
+                                "date": date.toLocaleDateString(),
+                                "type": json[router.query.slug].type,
+                            });
+                        }
+                        else {
+                            setBlogInfo({
+                                "title": "404",
+                                "date": "Page does not exist",
+                            });
+                        }
                     });
                 }
             });
 
             getRawData(`blog/${router.query.slug}.mdx`)
-            .then((response) => response.text())
-            .then((text) => {
-                return evaluate((text), {
-                    ...runtime,
-                    baseUrl: import.meta.url,
-                });
-            })
-            .then((mod) => setContent(() => mod.default));
+            .then((response) => {
+                if (response) {
+                    response.text().then((text) => {
+                    return evaluate((text), {
+                        ...runtime,
+                        baseUrl: import.meta.url,
+                    });
+                })
+                .then((mod) => setContent(() => mod.default));
+                }
+            });
         }
     }, [router.isReady]);
 
@@ -75,7 +86,7 @@ export default function Page({ code }) {
                             <div className="flex flex-col gap-8">
                                 <div className="handwritten keyframe-slide-from-top text-2xl keyframe-increase-opacity">{blogInfo.type == "blog" ? "Hi there!" : ""}</div>
                                 <div className="blog-box flex flex-col gap-4">
-                                    <Content components={{ CodeBlock, ImageBlock }} />
+                                    <Content components={{ CodeBlock, ImageBlock, HoverTextBlock }} />
                                 </div>
                                 {
                                     blogInfo.type == "blog" ? 

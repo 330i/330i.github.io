@@ -69,12 +69,12 @@ export default function Page() {
                 </div>
                 <div className='w-full h-screen xl:z-10 pt-20 xl:pt-0 mb-8 text-white flex flex-col items-center bg-[#09090b]'>
                     <div className='w-full max-w-[1080px] px-8 md:px-16 py-8 flex flex-col gap-8'>
-                        <div className='handwritten text-4xl text-fuchsia-200 flex flex-row gap-4'><div>WHAT I'VE BEEN UP TO</div><div className='rotate-45 max-sm:hidden'>-&gt;</div></div>
+                        <div className='handwritten text-4xl text-fuchsia-200 flex flex-row gap-4'><div>WHAT RANDOMLY POPPED UP IN MY BRAIN</div><div className='rotate-45 max-sm:hidden'>-&gt;</div></div>
                             <div className='flex flex-col gap-8'>
                             {
                                 blogData &&
                                 Object.entries(blogData).filter(([_, v]) => v.type == 'blog').map(([k, v]) => 
-                                    <BlogLink timestamp={k} entry={v} key={`blog-${k}`} />
+                                    <BlogLink blogKey={k} entry={v} key={`blog-${k}`} />
                                 ).reverse()
                             }
                         </div>
