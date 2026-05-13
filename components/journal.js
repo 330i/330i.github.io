@@ -4,13 +4,13 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-function BlogLink({ timestamp, entry }) {
+function BlogLink({ blogKey, entry }) {
     return (
         <Link
             className='flex flex-col gap-3 group cursor-pointer'
             href={{
                 pathname: '/blog/[slug]',
-                query: { slug: timestamp },
+                query: { slug: blogKey },
             }}
         >
             <div className='text-2xl font-semibold flex flex-row gap-5 relative'>
@@ -196,4 +196,26 @@ function ImageBlock({ src, desc, origin }) {
     )
 }
 
-export { BlogLink, CodeBlock, ImageBlock }
+function HoverTextBlock({ children }) {
+    const [isHover, setIsHover] = useState(false);
+
+    return (
+        <span className="relative inline-block pl-0.5 -mb-0.5">
+            <div className={clsx(!isHover && "opacity-0", "absolute pointer-events-none left-0 top-6 px-3 py-2 w-max max-w-48 bg-white/15 text-white text-sm rounded-md border border-white/25 transition-all backdrop-blur-lg z-10")}>
+                {children}
+            </div>
+            <span
+                className="relative inline"
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+            >
+                <img
+                    className="w-4"
+                    src="/icons/info.svg"
+                />
+            </span>
+        </span>
+    );
+}
+
+export { BlogLink, CodeBlock, ImageBlock, HoverTextBlock }
