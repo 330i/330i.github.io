@@ -4,6 +4,8 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+import { getResourceLink } from "../utilities/retriever";
+
 function BlogLink({ blogKey, entry }) {
     return (
         <Link
@@ -101,7 +103,7 @@ function CodeBlock({ children, className, isExpandable=false }) {
     );
 }
 
-function ImageBlock({ src, desc, origin }) {
+function ImageBlock({ src, desc, origin, isLocal = false }) {
     const [selected, setSelected] = useState(false);
     const [aspectRatio, setAspectRatio] = useState(4/3);
     const [zoom, setZoom] = useState(100);
@@ -121,10 +123,14 @@ function ImageBlock({ src, desc, origin }) {
         setOffset({x: 0, y: 0});
     };
 
+    if (isLocal) {
+        src = getResourceLink(src);
+    }
+
     return (
         <div>
             <div
-                className={clsx(selected && "absolute left-0 top-0 w-screen h-screen backdrop-blur-sm z-50", "flex items-center justify-center rounded-lg overflow-hidden bg-zinc-900/50")}
+                className={clsx(selected && "absolute left-0 top-0 w-screen h-screen backdrop-blur-sm z-50", "flex items-center justify-center rounded-lg overflow-hidden")}
             >
                 <div
                     className={clsx(selected ? "relative w-screen h-screen overflow-hidden" : "w-full")}
@@ -201,13 +207,18 @@ function HoverTextBlock({ children }) {
 
     return (
         <span className="relative inline-block pl-0.5 -mb-0.5">
-            <div className={clsx(!isHover && "opacity-0", "absolute pointer-events-none left-0 top-6 px-3 py-2 w-max max-w-48 bg-white/15 text-white text-sm rounded-md border border-white/25 transition-all backdrop-blur-lg z-10")}>
-                {children}
+            <div
+                className={clsx(!isHover && "opacity-0 pointer-events-none", "absolute left-0 top-0 transition-all z-10")}
+                onMouseLeave={() => setIsHover(false)}
+            >
+                <div className="w-4 h-4"></div>
+                <div className="px-3 py-2 w-max max-w-48 bg-white/15 text-white text-sm rounded-md border border-white/25 backdrop-blur-lg">
+                    {children}
+                </div>
             </div>
             <span
                 className="relative inline"
                 onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
             >
                 <img
                     className="w-4"
